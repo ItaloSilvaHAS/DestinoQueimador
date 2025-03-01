@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poderes - Burned Fate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+    <!-- Menu de Navegação -->
+    <nav class="p-4 bg-red-900 flex justify-between items-center">
+        <div class="text-xl font-bold">Burned Fate</div>
+        <button id="menu-btn" class="text-white focus:outline-none text-2xl">
+            ☰
+        </button>
+        <ul id="menu" class="hidden absolute top-16 right-4 bg-red-900 p-4 rounded-lg space-y-2">
+            <li><a href="index.html" class="block hover:text-gray-300">Início</a></li>
+            <li><a href="poderes.html" class="block hover:text-gray-300">Poderes</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center mb-6 text-red-500">Árvores de Habilidade</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Modelo para cada energia -->
+            <div class="bg-gray-900 p-4 rounded-lg text-center shadow-lg shadow-red-500">
+                <img src="vital.gif" alt="Energia Vital" class="mx-auto mb-4 w-48 h-48 object-cover rounded-lg border-2 border-red-500">
+                <h2 class="text-2xl font-bold text-red-400">Energia Vital</h2>
+                <p class="text-gray-400">Poder de cura, resistência e fortalecimento físico.</p>
+                <a href="arvore_vital.html" class="mt-4 block bg-red-600 hover:bg-red-700 text-white py-2 rounded">Ver Árvore</a>
+            </div>
+
+            <div class="bg-gray-900 p-4 rounded-lg text-center shadow-lg shadow-red-500">
+                <img src="mana.gif" alt="Mana" class="mx-auto mb-4 w-48 h-48 object-cover rounded-lg border-2 border-red-500">
+                <h2 class="text-2xl font-bold text-red-400">Mana</h2>
+                <p class="text-gray-400">Fonte de magia e manipulação elemental.</p>
+                <a href="arvore_mana.html" class="mt-4 block bg-red-600 hover:bg-red-700 text-white py-2 rounded">Ver Árvore</a>
+            </div>
+            
+            <div class="bg-gray-900 p-4 rounded-lg text-center shadow-lg shadow-red-500">
+                <img src="rei.gif" alt="Reiryoku" class="mx-auto mb-4 w-48 h-48 object-cover rounded-lg border-2 border-red-500">
+                <h2 class="text-2xl font-bold text-red-400">Reiryoku</h2>
+                <p class="text-gray-400">Poder espiritual e conexão com almas.</p>
+                <a href="arvore_reiryoku.html" class="mt-4 block bg-red-600 hover:bg-red-700 text-white py-2 rounded">Ver Árvore</a>
+            </div>
+            
+            <div class="bg-gray-900 p-4 rounded-lg text-center shadow-lg shadow-red-500">
+                <img src="Amal.webp" alt="Energia Amaldiçoada" class="mx-auto mb-4 w-48 h-48 object-cover rounded-lg border-2 border-red-500">
+                <h2 class="text-2xl font-bold text-red-400">Energia Amaldiçoada</h2>
+                <p class="text-gray-400">Poder destrutivo através de Jujutsu.</p>
+                <a href="arvore_amaldiçoada.html" class="mt-4 block bg-red-600 hover:bg-red-700 text-white py-2 rounded">Ver Árvore</a>
+            </div>
+            
+            <div class="bg-gray-900 p-4 rounded-lg text-center shadow-lg shadow-red-500">
+                <img src="KI.webp" alt="KI" class="mx-auto mb-4 w-48 h-48 object-cover rounded-lg border-2 border-red-500">
+                <h2 class="text-2xl font-bold text-red-400">KI</h2>
+                <p class="text-gray-400">Energia interior que aprimora o corpo e a mente.</p>
+                <a href="arvore_ki.html" class="mt-4 block bg-red-600 hover:bg-red-700 text-white py-2 rounded">Ver Árvore</a>
+            </div>
+
+            <div class="bg-gray-900 p-4 rounded-lg text-center shadow-lg shadow-red-500">
+                <img src="ck.webp" alt="Chakra" class="mx-auto mb-4 w-48 h-48 object-cover rounded-lg border-2 border-red-500">
+                <h2 class="text-2xl font-bold text-red-400">Chakra</h2>
+                <p class="text-gray-400">Energia usada para técnicas ninjas e habilidades especiais.</p>
+                <a href="arvore_chakra.html" class="mt-4 block bg-red-600 hover:bg-red-700 text-white py-2 rounded">Ver Árvore</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

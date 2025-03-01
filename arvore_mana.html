@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Mana - Burned Fate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glow-box {
+            background: rgba(255, 0, 0, 0.2);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .glow-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+        }
+        .gif-container {
+            padding: 10px;
+            background: black;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="p-4 bg-red-900 flex justify-between items-center relative">
+        <div class="text-xl font-bold">Burned Fate</div>
+        <button id="menu-btn" class="text-white focus:outline-none">☰</button>
+        <ul id="menu" class="hidden absolute top-16 right-4 bg-red-900 p-4 rounded-lg space-y-2 shadow-lg">
+            <li><a href="index.html" class="block hover:text-gray-400">Início</a></li>
+            <li><a href="poderes.html" class="block hover:text-gray-400">Poderes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container mx-auto p-6">
+        <h1 class="text-5xl font-extrabold text-center text-red-500 mb-12">Árvore de Habilidades - Mana</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Habilidades -->
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Despertar.webp" alt="Manto de Cura" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Desperta Da Mágia</h2>
+                <p class="text-gray-300 mt-2">Ao adqurir consciencia da mana dentro de si, um grimorio pode ser conquistado pelo usúario. Entre 3,4 & 5 trevos, a mágia ira se manifestar. Com cada tipo de grimorio oferecendo um tipo de mágia e força diferente.</p>
+            </div>
+
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Reforço.webp" alt="Força Implacável" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Mana Skin</h2>
+                <p class="text-gray-300 mt-2">O mago consegue utilizar a mana dentro de seu corpo, e expelir para fora, como um escudo protetor. Aumentando sua resistencia fisica e magica. Sua defesa se torna o equivalente a sua mana, e seu ataque aumeta em 50%</p>
+            </div>
+            
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="ManaZone.webp" alt="Regeneração de Membros" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Mana-Zone</h2>
+                <p class="text-gray-300 mt-2">A Mana Zone é uma habilidade que permite ao mago manipular o mana em uma área ao seu redor. Assim, o mago pode reunir e utilizar mais magia do que seria capaz normalmente. Ofensivamente, esse mana pode ser canalizado para magias para aumentar seu tamanho, número e alcance. Ele também pode ser usado para lançar ataques em qualquer direção e de qualquer direção dentro da zona. Magias podem ser criadas ao redor de um alvo para impedi-lo de escapar. Defensivamente, o mana pode ser usado para aguçar a detecção de mana e aumentar o tempo de reação, bem como para aumentar a Pele de Mana e outras magias de Reforço Mágico , permitindo a previsão de ataques inimigos, bem como permitindo que o usuário se mova e fique no ar.
+
+                    Se estiverem cercados por magia hostil, os magos podem usar a Zona de Mana para criar um espaço de mana condensado e espesso que os protege e protege seus aliados.
+                    
+                    
+            </div>
+
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Runa.webp" alt="Força Implacável" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Mana Method</h2>
+                <p class="text-gray-300 mt-2">O usuário forma runas de mana natural e as organiza para formar instruções de magia. Esses arranjos podem ser aplicados diretamente a um feitiço ou formar um círculo mágico maior. Instruções simples requerem apenas arranjos simples, mas designs mais complexos podem criar feitiços e efeitos mais poderosos. No auge, essas matrizes concentram a mana da natureza e geram o elemento real. Por exemplo, Magia de Relâmpago se torna Magia de Relâmpago Verdadeiro e gera um relâmpago real.</p>
+            </div>
+            
+
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="supremo.webp" alt="Força Implacável" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Mágia Suprema</h2>
+                <p class="text-gray-300 mt-2">Esta técnica mágica requer que o usuário se familiarize com a origem das almas e se aproxime fisicamente da mana. O usuário é então habilitado a incorporar toda a sua magia e criar um feitiço que é único para cada indivíduo. Esses são feitiços incrivelmente poderosos, capazes de combater demônios de nível médio a alto. ---- <strong>Em resumo, podem criar um feitiço devastador ao chegar um nivel bom o suficiente e conhecer todos os fundamentos da mana. -----</strong>
+
+                    A vasta quantidade de magia necessária para esta técnica a limita apenas aos elfos mais poderosos. No entanto, os humanos que aprenderam Mana Method e são capazes de Magia Verdadeira, podem pegar magia da mana natural para obter artificialmente a Magia Suprema</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Habilidades - Lobisomens</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        aside {
+            width: 100%;
+            background-color: #111;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        aside h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            color: #b22222;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        aside nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        aside nav ul li {
+            margin: 10px;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        aside nav ul li a:hover {
+            color: #b22222;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px;
+            background: radial-gradient(circle, #1a1a1a, #0a0a0a);
+            text-align: center;
+        }
+
+        main h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3rem;
+            color: #b22222;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 6px rgba(178, 34, 34, 0.8);
+        }
+
+        .habilidades-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .habilidade {
+            width: 90%;
+            max-width: 320px;
+            background: rgba(178, 34, 34, 0.2);
+            padding: 25px;
+            border-left: 6px solid #b22222;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(178, 34, 34, 0.4);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .habilidade:hover {
+            transform: scale(1.05);
+        }
+
+        .habilidade h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.8rem;
+            color: #b22222;
+            margin-bottom: 10px;
+        }
+
+        .habilidade p {
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        @media (min-width: 768px) {
+            .habilidade {
+                width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="races.html">Raças</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h1>Árvore de Habilidades - Lobisomens</h1>
+        <div class="habilidades-container">
+            <div class="habilidade">
+                <h2>Fúria Bestial</h2>
+                <p>Requer: 15K pontos em Força</p>
+                <p>Aumenta drasticamente o dano físico por um curto período, dobrando sua força.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Sentidos Aguçados</h2>
+                <p>Requer: 20K pontos em Destreza</p>
+                <p>Permite detectar inimigos ocultos e antecipar ataques.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Regeneração Lunar</h2>
+                <p>Requer: 40K pontos em Resistência</p>
+                <p>Recupera saúde rapidamente sob a luz da lua.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Rugido Aterrorizante</h2>
+                <p>Requer: 100K pontos em Determinação</p>
+                <p>Assusta inimigos próximos, reduzindo sua defesa em 50% temporariamente. Funciona apenas se a determinação do Lobisomem for maior.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

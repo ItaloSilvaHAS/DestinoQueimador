@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História - A Era do Eclipse</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background-color: #0a0a0a; /* Fundo mais escuro */
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Barra Lateral */
+        aside {
+            width: 250px;
+            background-color: #111;
+            padding: 20px;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        aside h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.8rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        aside nav ul {
+            list-style: none;
+        }
+
+        aside nav ul li {
+            margin-bottom: 15px;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        aside nav ul li a:hover {
+            color: #ff4444;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            flex: 1;
+            padding: 40px;
+            background-color: #1a1a1a;
+            overflow-y: auto;
+        }
+
+        main h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        main p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        main .destaque {
+            background-color: rgba(255, 68, 68, 0.1);
+            padding: 15px;
+            border-left: 4px solid #ff4444;
+            margin-bottom: 20px;
+        }
+
+        main .destaque p {
+            margin: 0;
+            font-style: italic;
+            color: #ff8888;
+        }
+
+        /* Botão de Voltar */
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4444;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .btn-voltar:hover {
+            background-color: #cc0000;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+                padding: 15px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            }
+
+            aside h2 {
+                font-size: 1.5rem;
+            }
+
+            aside nav ul li a {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            main h1 {
+                font-size: 2.5rem;
+            }
+
+            main p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra Lateral -->
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <h1>História do Eclipse</h1>
+        <div class="destaque">
+            <p>
+                "O Eclipse não é apenas uma força da natureza; é uma maldição que consome almas e destrói reinos."
+            </p>
+        </div>
+        <p>
+            Há milênios, o Soberano do Eclipse mergulhou o mundo em trevas. Sua essência, fragmentada e esquecida, aguarda o próximo mestre. Aqueles que a buscam são movidos pela ambição, pela fé ou pela sede de poder. Mas cuidado: o Eclipse consome tanto quanto concede.
+        </p>
+        <p>
+            Enquanto reis batalham, religiões colidem e sociedades secretas procuram pela Essência do Eclipse, o mundo se aproxima de uma nova era de caos. Os mais sábios temem que, se a Essência for despertada novamente, nada será capaz de impedir um novo cataclismo.
+        </p>
+        <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+    </main>
+</body>
+</html>

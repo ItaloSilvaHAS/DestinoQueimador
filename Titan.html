@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Habilidades - Gigantes</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cinzel Decorative', cursive;
+            background: url('https://images.unsplash.com/photo-1549576490-b998c5ef8fc7') no-repeat center center fixed;
+            background-size: cover;
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        aside {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            text-align: center;
+        }
+
+        aside h2 {
+            font-size: 2rem;
+            color: #ffaa00;
+            margin-bottom: 15px;
+        }
+
+        aside nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        aside nav ul li {
+            margin: 10px;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        aside nav ul li a:hover {
+            color: #ffaa00;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px;
+            background: rgba(26, 26, 26, 0.95);
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 3.5rem;
+            color: #ffaa00;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 10px rgba(255, 170, 0, 0.8);
+        }
+
+        .habilidades-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .habilidade {
+            width: 90%;
+            max-width: 350px;
+            background: linear-gradient(145deg, rgba(255, 170, 0, 0.2), rgba(255, 170, 0, 0.1));
+            padding: 20px;
+            margin: 15px;
+            border: 2px solid #ffaa00;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(255, 170, 0, 0.5);
+        }
+
+        .habilidade h2 {
+            font-size: 2rem;
+            color: #ffaa00;
+            margin-top: 10px;
+        }
+
+        .habilidade p {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        @media (min-width: 768px) {
+            .habilidades-container {
+                justify-content: space-around;
+            }
+            .habilidade {
+                width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="races.html">Raças</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h1>Árvore de Habilidades - Gigantes</h1>
+        <div class="habilidades-container">
+            <div class="habilidade">
+                <h2>Colosso Indomável</h2>
+                <p>Requer: 10K pontos em Força</p>
+                <p>Seus ataques causam dano triplicado e podem quebrar defesas inimigas.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Armadura Titânica</h2>
+                <p>Requer: 20K pontos em Resistência</p>
+                <p>A pele se torna resistente como ferro, reduzindo 70% do dano recebido.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Passo Aniquilador</h2>
+                <p>Requer: 35K pontos em Determinação</p>
+                <p>Cada passo causa um abalo sísmico que atordoa inimigos próximos.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Rugido Primordial</h2>
+                <p>Requer: 50K pontos em Vigor</p>
+                <p>Um grito destruidor que paralisa inimigos e os empurra para longe.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Devorador de Montanhas</h2>
+                <p>Requer: 100K pontos em Alcance</p>
+                <p>Ataques em área gigantesca que destroem tudo em um raio de impacto brutal.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

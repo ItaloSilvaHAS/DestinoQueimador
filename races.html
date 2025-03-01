@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raças - A Era do Eclipse</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Barra Lateral */
+        aside {
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.9);
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        aside h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.7);
+        }
+
+        aside nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        aside nav ul li {
+            margin: 10px;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        aside nav ul li a:hover {
+            color: #ff4444;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.7);
+        }
+
+        /* Conteúdo Principal */
+        main {
+            flex: 1;
+            padding: 40px;
+            background-color: rgba(26, 26, 26, 0.8);
+            text-align: center;
+        }
+
+        main h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3.5rem;
+            color: #ff4444;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 68, 68, 0.7);
+        }
+
+        .racas-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .raca {
+            background-color: rgba(255, 68, 68, 0.1);
+            padding: 20px;
+            border-left: 4px solid #ff4444;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .raca:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(255, 68, 68, 0.5);
+        }
+
+        .raca img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #ff4444;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .raca:hover img {
+            border-color: #cc0000;
+        }
+
+        .raca h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            color: #ff4444;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.7);
+        }
+
+        .raca p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+
+        .raca a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #ff4444;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .raca a:hover {
+            background-color: #cc0000;
+        }
+
+        /* Botão de Voltar */
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4444;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+
+        .btn-voltar:hover {
+            background-color: #cc0000;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .racas-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra Lateral -->
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="races.html">Raças</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <h1>Raças</h1>
+        <div class="racas-container">
+            <!-- Humanos -->
+            <div class="raca">
+                <img src="Guts.webp" alt="Humanos">
+                <h2>Humanos</h2>
+                <p>
+                    Os humanos são a centelha de luz em um mundo envolto pelas sombras do Eclipse. Sem dons inatos ou magias ancestrais, eles conquistam seu lugar através de pura determinação e engenhosidade. São os arquitetos de impérios, os estrategistas das guerras mais sangrentas e os sonhadores que desafiam o destino. Sua vida curta é compensada por um legado que ecoa através das eras, moldando o mundo com suas ambições e paixões. Em um universo onde demônios, dragões e elfos dominam, os humanos provam que a verdadeira força reside na vontade inquebrável de sobreviver e prosperar.
+
+                </p>
+                <a href="humanos_habilidades.html">Ver Habilidades</a>
+            </div>
+
+            <!-- Elfos -->
+            <div class="raca">
+                <img src="Frieren.jpeg" alt="Elfos">
+                <h2>Elfos</h2>
+                <p>
+                    Pequenos em estatura, mas gigantes em poder, os elfos são seres frágeis que carregam a essência da magia em suas veias. Com menos de um metro de altura, eles são frequentemente subestimados, mas sua conexão profunda com as forças arcanas os torna temíveis e respeitados. Vivendo em comunidades escondidas nas florestas mais densas, os elfos canalizam sua energia para tecer feitiços poderosos, curar feridas mortais e manipular os elementos ao seu redor. Sua fragilidade física é compensada por uma mente afiada e uma habilidade incomparável com a magia. Em um mundo onde a força bruta muitas vezes prevalece, os elfos provam que o verdadeiro poder reside na sabedoria e no domínio das artes místicas.
+                </p>
+                <a href="elfos_habilidades.html">Ver Habilidades</a>
+            </div>
+
+                       <!-- Demônios -->
+                       <div class="raca">
+                        <img src="demo.webp" alt="Demônios">
+                        <h2>Demônios</h2>
+                        <p>
+                            Originários das profundezas do Abismo, os demônios são a personificação do caos e da destruição. Suas formas grotescas e mutáveis refletem a corrupção que carregam em suas almas. Servos leais do Soberano do Eclipse, eles são atraídos pelo poder e pela promessa de carnificina. Sua presença emana um aura de medo, e seu toque corrompe tudo o que é puro. Armados com magias proibidas e uma sede insaciável por destruição, os demônios são os arautos do fim dos tempos. No entanto, entre suas fileiras, alguns buscam libertar-se das correntes do Eclipse, alimentando uma rebelião silenciosa que pode mudar o destino do mundo.
+                        </p>
+                        <a href="demonios_habilidades.html">Ver Habilidades</a>
+                    </div>
+        
+                    <!-- Gigantes -->
+                    <div class="raca">
+                        <img src="Titan.webp" alt="Gigantes">
+                        <h2>Gigantes</h2>
+                        <p>
+                            Os gigantes são colossos vivos, testemunhas silenciosas de uma era perdida no tempo. Com corpos que rivalizam com montanhas em tamanho e força, eles são os guardiões das terras mais selvagens e inexploradas. Sua conexão com os elementos da natureza é tão profunda que muitos acreditam que eles são a própria personificação da terra, do fogo, do gelo e do vento. Apesar de sua aparência intimidante, os gigantes são seres de sabedoria ancestral, guardando segredos que podem mudar o curso da história. Em um mundo onde o Eclipse ameaça consumir tudo, os gigantes permanecem como pilares de resistência, prontos para despertar e proteger o que resta do equilíbrio.
+
+                        </p>
+                        <a href="Titan.html">Ver Habilidades</a>
+                    </div
+        
+                      Vampiros -->
+                    <div class="raca">
+                        <img src="dRACULA.webp" alt="Vampiros">
+                        <h2>Vampiros</h2>
+                        <p>
+                            Imortais e sedutores, os vampiros são criaturas da noite, condenados a uma existência eterna entre a luxúria e a maldição. Sua beleza hipnotizante esconde uma fome insaciável por sangue, o preço que pagam por sua imortalidade. Mestres da manipulação e da escuridão, eles vagam pelas sombras, tecendo intrigas e colhendo vidas como quem colhe frutos maduros. Apesar de seu poder e charme, os vampiros são escravos de sua própria natureza, lutando diariamente contra a sede que os consome. Em um mundo onde o Eclipse domina, eles são tanto predadores quanto prisioneiros, buscando redenção ou afundando ainda mais na escuridão.
+                        </p>
+                        <a href="vamp.html">Ver Habilidades</a>
+                    </div>
+        
+                    <!-- Lobisomens -->
+                    <div class="raca">
+                        <img src="Ryan.webp" alt="Lobisomens">
+                        <h2>Lobisomens</h2>
+                        <p>
+                            Amaldiçoados pela Lua, os lobisomens são criaturas de dualidade, divididas entre a razão humana e a fúria da besta. Durante o dia, eles podem parecer pessoas comuns, mas quando a Lua Cheia surge, sua transformação é inevitável. Suas garras afiadas e dentes como lâminas são instrumentos de caça e destruição, enquanto seus instintos selvagens os tornam predadores implacáveis. A maldição é tanto um fardo quanto uma fonte de poder, e muitos lobisomens lutam para controlar a fera dentro de si. Em um mundo onde o Eclipse domina, eles são tanto caçadores quanto caçados, sempre à beira de sucumbir à selvageria que os define.
+
+                        </p>
+                        <a href="lobao.html">Ver Habilidades</a>
+                    </div>
+        
+                    <!-- Bruxas -->
+                    <div class="raca">
+                        <img src="Bruxa.webp" alt="Bruxas">
+                        <h2>Bruxas</h2>
+                        <p>
+                            Mestras das artes proibidas, as bruxas são temidas e reverenciadas em igual medida. Elas fazem pactos com entidades sombrias, trocando fragmentos de sua alma por poderes que desafiam as leis da natureza. Seus feitiços podem curar ou corromper, criar ou destruir, e sua presença é suficiente para semear o medo até nos corações mais corajosos. Vivendo à margem da sociedade, pos são consideradas perigosas pelos humanos, e se virem uma indefesa sera condenada a fogueira. as bruxas são tanto curadoras quanto destruidoras, manipulando o tecido da realidade para atender aos seus desígnios. Em um mundo onde o Eclipse domina, elas são as guardiãs de segredos antigos e as arquitetas de destinos que ninguém ousaria imaginar.
+                        </p>
+                        <a href="mira.html">Ver Habilidades</a>
+                    </div>
+        
+                    <!-- Apóstolos -->
+                    <div class="raca">
+                        <img src="Zodd.jpg" alt="Apóstolos">
+                        <h2>Apóstolos</h2>
+                        <p>
+                            Escolhidos pelos demônios, os apóstolos são humanos que sucumbiram à tentação do poder infernal. Em troca de sua lealdade, eles receberam habilidades além da compreensão mortal, mas pagaram um preço terrível: sua humanidade. Agora, são criaturas de dualidade, com corpos humanos que escondem uma essência demoníaca. Servindo como agentes do caos, os apóstolos espalham a influência do Eclipse pelo mundo, semeando destruição e corrupção. No entanto, alguns ainda guardam vestígios de sua antiga humanidade, lutando contra a escuridão que os consome. Em um mundo à beira do colapso, eles são tanto a ameaça quanto a esperança de redenção.
+                        </p>
+                        <a href="apollo.html">Ver Habilidades</a>
+                    </div>
+        
+                    <!-- Dragões -->
+                    <div class="raca">
+                        <img src="dragao1.webp" alt="Dragões">
+                        <h2>Dragões</h2>
+                        <p>
+                            Senhores dos céus e da terra, os dragões são criaturas de poder incomparável, cuja mera presença inspira temor e admiração. Com escamas que brilham como gemas e sopros que podem reduzir cidades a cinzas, eles são a personificação da força bruta e da magia primordial. A maioria dos dragões é movida por instintos selvagens, buscando apenas acumular tesouros e dominar territórios. No entanto, uma minoria rara e sábia transcende sua natureza bestial, possuindo inteligência e ambição que rivalizam com as dos maiores estrategistas. Em um mundo onde o Eclipse ameaça consumir tudo, os dragões são tanto uma força da natureza quanto guardiões de segredos antigos, capazes de decidir o destino de reinos inteiros.
+                        </p>
+                        <a href="Dragon.html">Ver Habilidades</a>
+                    </div>
+                </div>
+        
+                <!-- Botão de Voltar -->
+                <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+            </main>
+        </body>
+        </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Amaldiçoada - Burned Fate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glow-box {
+            background: rgba(0, 0, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 0, 255, 0.8);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .glow-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 0, 255, 1);
+        }
+        .gif-container {
+            padding: 10px;
+            background: black;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+        }
+        .hidden-section { display: none; }
+        .active-section { display: block; }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="p-4 bg-red-900 flex justify-between items-center relative">
+        <div class="text-xl font-bold">Burned Fate</div>
+        <button id="menu-btn" class="text-white focus:outline-none">☰</button>
+        <ul id="menu" class="hidden absolute top-16 right-4 bg-red-900 p-4 rounded-lg space-y-2 shadow-lg">
+            <li><a href="index.html" class="block hover:text-gray-400">Início</a></li>
+            <li><a href="poderes.html" class="block hover:text-gray-400">Poderes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container mx-auto p-6 text-center">
+        <h1 class="text-5xl font-extrabold text-red-500 mb-8">Árvore de Habilidades - Amaldiçoada</h1>
+        <div class="flex justify-center gap-4 mb-6">
+
+        </div>
+    </div>
+    
+    <!-- Seção Virtuoso -->
+    <div id="virtuoso" class="container mx-auto p-6 active-section">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Exemplo de Habilidade -->
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="yuji.webp" alt="Habilidade 1" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">A Energia Amaldiçoada</h2>
+                <p class="text-gray-300 mt-2"> A base da energia vem das emoções negativas dos humanos, que podem ser controladas por Feiticeiros e Maldições. 
+                    Na maior parte, a energia é simplesmente liberada por humanos que formam e criam espíritos amaldiçoados. Energia Amaldiçoada aprimora o corpo, permitindo que os usuários realizem proezas acima dos humanos comuns.
+                    A energia amaldiçoada é capaz de danificar maldições que são invulneráveis a danos físicos. Lesões com energia amaldiçoada fazem com que as pessoas sejam automaticamente amaldiçoadas, isso cria consequências graves para seres normais, como dor extrema, enfraquecimento do corpo, adoecimento e, eventualmente, morte. Quem não é feiticeiro tem 0 tolerância à energia amaldiçoada.
+                    Por isso existem os feticeiros Jujutsu, eles conseguem compreender a energia por trás de toda dor e sofrimento, e a utilizam para combater maldições e proteger a humanidade. Ao ter consciencia dessa energia, o feiticeiro pode moldar a energia amaldiçoada em técnicas de combate, e até mesmo em armas.
+                    Mas sendo mais comum, envolvendo em seu próprio corpo, para aumentar sua força, velocidade e resistência. Seguindo como base, a soma de sua energia mais o atributo desejado. Os pertencentes a está Energia, podem acabar por desenvolver (ou adqurir) um Jujutsu. </p>
+
+                </p>
+            </div>
+            
+            <!-- Repita para mais 4 habilidades -->
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="First.webp" alt="Habilidade 2" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">Punho Divergente</h2>
+                <p class="text-gray-300 mt-2">O punho divergente é uma tecnica simples; Ao golpear com seu punho usando uma camada fina de energia amaldiçoada, uma segunda onda de energia é liberada alguns momentos depois, efetivamente criando dois impactos com um soco. O dano é multiplicado em 2 em relação a
+                    energia amaldiçoada do individuo, neste caso, seria como Energia + Força x2 = Dano. --- <strong>Um ataque brutal para maldição e pessoas.</strong>
+                </p>
+            </div>
+            
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Black.gif" alt="Habilidade 3" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">Kokusen</h2>
+                <p class="text-gray-300 mt-2">O kokusen é mais um da serie de golpes fisicos com energia amaldiçoada, mas dessa vez com algo especial. O "Black Flash" é uma distorção no espaço que ocorre quando a energia amaldiçoada é aplicada dentro de 0,000001 segundos de um acerto físico.
+                     Quando um feiticeiro é capaz de fazer isso, sua energia amaldiçoada pisca em preto, e o poder destrutivo de seu golpe é igual a um golpe embuido com energia amaldiçoada elevado a 2,5. Esta técnica requer uma concentração incrível e nenhum feiticeiro de jujutsu é capaz de usá-la à vontade.
+                     No entanto, a realização real do Black Flash sugere que o usuário tem grande potencial e habilidade, pois foi afirmado que "as faíscas do flash negro não escolhem quem abençoar", eliminando qualquer chance de ser aleatório, E SIM HABILIDADE.
+            </div>
+            
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Reverse.webp" alt="Kido" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">Tecnica "Cursed Rerverse"</h2>
+                <p class="text-gray-300 mt-2">Técnica amaldiçoada reversa converte energia amaldiçoada em positiva para regenerar a carne e curar ferimentos. Energia amaldiçoada vem de emoções negativas, ruim para curar coisas vivas. Técnica amaldiçoada reversa usa o princípio de multiplicar um negativo por outro negativo para produzir um positivo.
+                    Enquanto a energia amaldiçoada flui do estômago, o cérebro direciona técnica amaldiçoada reversa.
+                    Energia positiva pode reproduzir sangue, osso, carne e órgãos, permitindo que feiticeiros proficientes recuperem membros inteiros e aguentem ataques poderosos. A velocidade e efetividade do processo dependem da produção de energia amaldiçoada do usuário.
+                    Ou seja, quanto maior a energia amaldiçoada do individuo, mais rapido e efetivo sera a cura. </p>
+                    
+                    </p>
+            </div>
+            
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="domain.gif" alt="Habilidade 5" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">Ápice Jujutsu: Expansão De Dominio & Tecnica Maxima </h2>
+                <p class="text-gray-300 mt-2">A <strong>Expansão de Dominio</strong> é uma técnica de barreira avançada e é considerada o auge da feitiçaria jujutsu. Constrói o domínio inato do usuário dentro de uma barreira imbuída com a técnica amaldiçoada inata dele. 
+                    Dentro de uma expansão de domínio, as técnicas amaldiçoadas do usuário são melhoradas e qualquer uma que é ativada tem seu acerto garantido. Expansão de Domínio é a técnica mais suprema de qualquer usuário de jujutsu. É conquistada ao expandir o domínio inato com energia amaldiçoada enquanto usa uma barreira para construí-lo dentro de um espaço separado. O usuário então imbui sua técnica amaldiçoada dentro da barreira para completar a expansão, permitindo que ele use sua habilidade através do domínio inteiro.
+                    Um sinal de mão específico ou sinal único ao usuário é necessário para expandir o domínio respectivo de alguém. Por fora, uma barreira de domínio normal é fechada, fazendo parecer uma esfera negra flutuando que pode até ser movida se necessário.
+ <br> <br>
+                    <p> Já a <Strong>Tecnica Maxima</Strong> é um feitiço de escala muito maior que os outros, o feiticeiro pode criar está tecnica através de muito tempo de treino e aperfeiçoamento. </p>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Seleciona o botão do menu e o elemento do menu
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        // Adiciona um evento de clique ao botão do menu
+        menuBtn.addEventListener('click', () => {
+            // Alterna a classe 'hidden' no menu
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

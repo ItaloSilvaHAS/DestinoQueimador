@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades - Humanos</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Cabeçalho */
+        header {
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.9);
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            color: #ff4444;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.7);
+        }
+
+        /* Barra Lateral */
+        aside {
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.9);
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin-top: 80px; /* Espaço para o cabeçalho fixo */
+        }
+
+        aside h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.7);
+        }
+
+        aside nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        aside nav ul li {
+            margin: 0;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            border: 2px solid #ff4444;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        aside nav ul li a:hover {
+            background-color: #ff4444;
+            color: #0a0a0a;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            flex: 1;
+            padding: 40px;
+            background-color: rgba(26, 26, 26, 0.8);
+            text-align: center;
+            margin-top: 20px; /* Espaço para o cabeçalho fixo */
+        }
+
+        .habilidade {
+            background-color: rgba(255, 68, 68, 0.1);
+            padding: 20px;
+            border-left: 4px solid #ff4444;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .habilidade:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(255, 68, 68, 0.5);
+        }
+
+        .habilidade h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.8rem;
+            color: #ff4444;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.7);
+        }
+
+        .habilidade p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+
+        .requisitos {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #ff4444;
+        }
+
+        .requisitos span {
+            background-color: rgba(255, 68, 68, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Botão de Voltar */
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4444;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+
+        .btn-voltar:hover {
+            background-color: #cc0000;
+        }
+
+        /* Rodapé */
+        footer {
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.9);
+            padding: 20px;
+            box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1rem;
+            color: #ff4444;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.7);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            aside h2 {
+                font-size: 1.8rem;
+            }
+
+            aside nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .habilidade h2 {
+                font-size: 1.5rem;
+            }
+
+            .habilidade p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Habilidades - Humanos</h1>
+    </header>
+
+    <!-- Barra Lateral -->
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="races.html">Raças</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Habilidade 1 -->
+        <div class="habilidade">
+            <h2>Velocidade Sobrenatural</h2>
+            <p>
+                O humano dobra sua velocidade por 1 cena, permitindo ataques rápidos e esquivas ágeis. Ideal para surpreender inimigos.
+            </p>
+            <div class="requisitos">
+                <span>Level: 1</span>
+                <span>Velocidade: 10.000</span>
+            </div>
+        </div>
+
+        <!-- Habilidade 2 -->
+        <div class="habilidade">
+            <h2>Previsão de Ataques</h2>
+            <p>
+                O humano se torna capaz de antecipar movimentos; seja para desviar de ataques, sentir presenças e ate antecipar contra ataques mais rapido que si proprio.
+            </p>
+            <div class="requisitos">
+                <span>Level: 5</span>
+                <span>Destreza: 20.000</span>
+            </div>
+        </div>
+
+        <!-- Habilidade 3 -->
+        <div class="habilidade">
+            <h2>Fúria Berserk</h2>
+            <p>
+                Em meio a batalha, o humano acha a linha entre a evolução e seu cansaço, atingindo um estado de "fluxo". Seus atributos fisicos triplicam, e param de sentir dor POR 5 CENAS.
+            </p>
+            <div class="requisitos">
+                <span>Level: 10</span>
+                <span>Determinação: 30.000</span>
+            </div>
+        </div>
+
+        <!-- Habilidade 4 -->
+        <div class="habilidade">
+            <h2>Mestre Tático</h2>
+            <p>
+               Humanos, com sua sabedoria elevada, podem contribuir para suas estrategias de guerra. Eles podem criar aberturas em ataques, planejar movimentos e ate mesmo sair de situação de vida ou morte, apenas com tatica.
+            </p>
+            <div class="requisitos">
+                <span>Level: 15</span>
+                <span>Determinação: 50.000</span>
+            </div>
+        </div>
+
+        <!-- Habilidade 5 -->
+        <div class="habilidade">
+            <h2>Legado Heróico</h2>
+            <p>
+                O humano inspira aliados com sua presença. Todos os aliados ganham +50% em todos os atributos enquanto estiverem próximos.
+            </p>
+            <div class="requisitos">
+                <span>Level: 20</span>
+                <span>Determinação: 70.000</span>
+            </div>
+        </div>
+
+        <!-- Habilidade 6 -->
+        <div class="habilidade">
+            <h2>Vontade Indomável</h2>
+            <p>
+                O humano ignora todos os efeitos negativos e ganha imunidade a danos mentais e fisicos (como dor) por 3 CENAS. Pode ser usado uma vez por dia.
+            </p>
+            <div class="requisitos">
+                <span>Level: 25</span>
+                <span>Resistencia: 35.000</span>
+            </div>
+        </div>
+
+        <!-- Habilidade 7 -->
+        <div class="habilidade">
+            <h2>Golpe Relâmpago</h2>
+            <p>
+                O humano desfere um ataque tão rápido que é quase imperceptível. Causa dano triplicado.
+            </p>
+            <div class="requisitos">
+                <span>Level: 30</span>
+                <span>Velocidade & Destreza: 50.000</span>
+            </div>
+        </div>
+
+        <!-- Habilidade 8 -->
+        <div class="habilidade">
+            <h2>Energias</h2>
+            <p>
+                Desbloqueia a capacidade de usar uma das grandes energias, soznhio atraves de um treino.
+                Opções: KI, Chakra, Reiki, Mana, Energia Vital.
+                Adendo: A energia escolhida não pode ser mudada.
+                <ul>
+                    <li>KI: Aumenta a força física e a resistência.</li>
+                    <li>Chakra: Permite o uso de técnicas ninjas e manipulação de elementos.</li>
+                    <li>Reiki: Habilidades de cura e proteção.</li>
+                    <li>Mana: Magia poderosa e controle de elementos.</li>
+                    <li>Energia Vital: Aumenta a longevidade e a regeneração.</li>
+                </ul>
+                <p>
+                    Cada energia oferece habilidades únicas e vantagens específicas, permitindo ao humano adaptar-se a diferentes situações de combate e sobrevivência.
+                </p>
+            </p>
+            <div class="requisitos">
+                <span>Level: 50</span>
+               
+            </div>
+        </div>
+
+        <!-- Botão de Voltar -->
+        <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Burned Fate. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

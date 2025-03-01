@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Habilidades - Vampiros</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        aside {
+            width: 100%;
+            background-color: #111;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        aside h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            color: #aa0000;
+            margin-bottom: 15px;
+        }
+
+        aside nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        aside nav ul li {
+            margin: 10px;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        aside nav ul li a:hover {
+            color: #aa0000;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px;
+            background-color: #1a1a1a;
+            text-align: center;
+        }
+
+        main h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3rem;
+            color: #aa0000;
+            margin-bottom: 30px;
+        }
+
+        .habilidades-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .habilidade {
+            background: linear-gradient(135deg, rgba(170, 0, 0, 0.3), rgba(255, 0, 0, 0.1));
+            padding: 20px;
+            border-left: 4px solid #aa0000;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .habilidade:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+
+        .habilidade h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.8rem;
+            color: #aa0000;
+            margin-bottom: 10px;
+        }
+
+        .habilidade p {
+            font-size: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="races.html">Raças</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h1>Árvore de Habilidades - Vampiros</h1>
+        <div class="habilidades-container">
+            <div class="habilidade">
+                <h2>Regeneração Sombria</h2>
+                <p><strong>Requer:</strong> 20K pontos em Resistência</p>
+                <p>Cura automaticamente ao longo do tempo ao consumir sangue.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Velocidade das Sombras</h2>
+                <p><strong>Requer:</strong> 55K pontos em Velocidade</p>
+                <p>Movimentos extremamente rápidos, difíceis de prever - Sua velocidade dobra.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Mordida Vampírica</h2>
+                <p><strong>Requer:</strong> 70K pontos em Determinação</p>
+                <p>Se a determinação do Vampiro for maior, ele pode subjugar um inimigo e transformá-lo em um vampiro inferior que obedece suas ordens.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Domínio da Escuridão</h2>
+                <p><strong>Requer:</strong> 100K pontos em Energia</p>
+                <p>Conseguem utilizar Umbracinesia</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

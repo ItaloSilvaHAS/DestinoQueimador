@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mundo - A Era do Eclipse</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Barra Lateral */
+        aside {
+            width: 250px;
+            background-color: #111;
+            padding: 20px;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        aside h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.8rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        aside nav ul {
+            list-style: none;
+        }
+
+        aside nav ul li {
+            margin-bottom: 15px;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        aside nav ul li a:hover {
+            color: #ff4444;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            flex: 1;
+            padding: 40px;
+            background-color: #1a1a1a;
+            overflow-y: auto;
+        }
+
+        main h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        .local {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            background-color: rgba(255, 68, 68, 0.1);
+            padding: 20px;
+            border-left: 4px solid #ff4444;
+            border-radius: 5px;
+        }
+
+        .local img {
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+            border: 3px solid #ff4444;
+        }
+
+        .local h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            color: #ff4444;
+            margin-bottom: 10px;
+        }
+
+        .local p {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* Seção "A Aventura" */
+        .aventura {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            border: 1px solid #ff4444;
+        }
+
+        .aventura h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2.5rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .aventura .local {
+            background-color: rgba(255, 68, 68, 0.05);
+            border-left: 4px solid #ff6b6b;
+        }
+
+        .aventura .local h2 {
+            color: #ff6b6b;
+        }
+
+        .aventura .local p {
+            font-style: italic;
+        }
+
+        /* Botão de Voltar */
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4444;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .btn-voltar:hover {
+            background-color: #cc0000;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+                padding: 15px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            }
+
+            aside h2 {
+                font-size: 1.5rem;
+            }
+
+            aside nav ul li a {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            main h1 {
+                font-size: 2.5rem;
+            }
+
+            .local {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .local img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .local h2 {
+                font-size: 1.8rem;
+            }
+
+            .local p {
+                font-size: 1rem;
+            }
+
+            .aventura h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra Lateral -->
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <h1>O Mundo</h1>
+
+        <!-- Solmaria -->
+        <div class="local">
+            <img src="reinado.webp" alt="Solmaria">
+            <div>
+                <h2>Solmaria</h2>
+                <p>
+                    Solmaria é um reino de contrastes, onde a luz da esperança brilha intensamente, mas as sombras do passado e do presente espreitam em cada canto. Governado pelo Rei Arthur, um líder carismático e justo, Solmaria é conhecida como o "Refúgio dos Desabrigados", um lugar onde os oprimidos, exilados e perseguidos encontram abrigo e uma chance de recomeçar. No entanto, por trás dessa fachada de prosperidade e compaixão, há rumores de que o próprio rei guarda segredos obscuros que podem abalar os alicerces do reino.
+
+                    O reino é cercado por muralhas imponentes, construídas para proteger seus cidadãos dos perigos externos. Dentro dessas muralhas, há cidades vibrantes, campos férteis e florestas exuberantes. A capital, Aurora, é um espetáculo de arquitetura majestosa, com torres altas que parecem tocar o céu e ruas movimentadas onde pessoas de todas as raças e origens convivem em harmonia. No centro da cidade, o Castelo de Solmaria se ergue como um símbolo de poder e proteção, sua torre principal brilhando como um farol de esperança.
+                    
+                    No entanto, a sombra do Eclipse paira sobre Solmaria. Rumores circulam entre os cidadãos de que o Rei Arthur fez um pacto com forças sombrias para proteger seu reino, e que o preço desse pacto ainda está por ser pago. Alguns dizem que ele mantém um artefato proibido escondido nas profundezas do castelo, uma relíquia que poderia destruir o reino se caísse nas mãos erradas. Outros sussurram que o próprio rei é assombrado por visões de um futuro sombrio, onde Solmaria é consumida pelas trevas.
+                </p>
+            </div>
+        </div>
+
+        <div class="local">
+            <img src="karmafd.avif" alt="Solmaria">
+            <div>
+                <h2>Lunaria</h2>
+                <p>
+                    Lunaria é o oposto sombrio de Solmaria, um reino onde a força bruta e a ambição são as únicas leis. Governado pelo Rei Karma, um líder implacável e calculista, Lunaria é um lugar onde os fracos são esmagados e apenas os fortes sobrevivem. Karma acredita que o mundo deve ser governado por aqueles que têm o poder de tomar o que desejam, e sua sede de poder não conhece limites. Ele busca a Essência do Eclipse, uma força primordial que, segundo as lendas, pode conceder poder absoluto a quem a controlar.
+
+                    O reino de Lunaria é um lugar de paisagens desoladas e cidades fortificadas, onde a luz do sol raramente penetra. As terras são áridas e sombrias, com florestas mortas e montanhas negras que parecem cortar o céu. A capital, Noctis, é uma cidade de pedra negra e torres pontiagudas, onde a atmosfera é pesada e o ar é carregado de tensão. No centro da cidade, o Castelo das Sombras se ergue como um símbolo do poder de Karma, sua silhueta escura dominando o horizonte.
+                    
+                    Karma é um líder temido e respeitado, mas também odiado por muitos. Ele governa com mão de ferro, cercado por uma corte de conselheiros ambiciosos e generais leais que compartilham de sua visão de dominação. No entanto, mesmo entre seus aliados mais próximos, há traição e intriga, pois todos desejam um pedaço do poder que Karma busca.
+                    
+                    
+                </p>
+            </div>
+        </div>
+
+        <!-- Noctharys -->
+        <div class="local">
+            <img src="eclipse.jpg" alt="Noctharys">
+            <div>
+                <h2>Noctharys</h2>
+                <p>
+                    A nação sombria fundada pelo Soberano do Eclipse. Hoje, é uma terra de ruínas e mistérios, onde a essência do Eclipse ainda reside. Muitos acreditam que segredos antigos e poderes proibidos aguardam aqueles que ousam explorar suas profundezas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Ruínas de Eldrath -->
+        <div class="local">
+            <img src="ruinareal.jpg" alt="Ruínas de Eldrath">
+            <div>
+                <h2>Ruínas de Eldrath</h2>
+                <p>
+                    Uma cidade antiga abandonada, conhecida por sua arquitetura impressionante e por ser amaldiçoada. Dizem que espíritos antigos vagam por suas ruínas, e que tesouros perdidos e conhecimentos proibidos estão escondidos em suas catacumbas.
+                </p>
+            </div>
+        </div>
+
+        <div class="local">
+            <img src="loja.jfif" alt="Ruínas de Eldrath">
+            <div>
+                <h2>Loja</h2>
+                <p>
+                   Localizado entre as ruinas de Eldrath, e um pouco antes da fronteira para entrar na floresta dos sussurros, mora um velho comerciante. Ele vende itens magicos e raros, que podem ser de grande ajuda para os aventureiros. Porem, o preço é alto, e em alguns produtos, ele não aceita dinheiro. Apenas trocas. Mas no geral, ele é um bom homem, e sempre esta disposto a ajudar.
+                </p>
+            </div>
+        </div>
+
+        <div class="local">
+            <img src="susurros.jpg" alt="Ruínas de Eldrath">
+            <div>
+                <h2>Floresta Dos Susurros</h2>
+                <p>
+                    A Floresta dos Sussurros é um lugar de mistério e temor, onde a natureza parece estar viva e os segredos do mundo antigo são guardados a sete chaves. Localizada no coração de um vale esquecido, a floresta é envolta por uma névoa perpétua que nunca se dissipa, mesmo sob o sol mais forte. As árvores, altas e retorcidas, parecem sussurrar segredos uns para os outros, e quem entra na floresta ouve vozes suaves que ecoam em sua mente, como se a própria floresta estivesse tentando se comunicar.
+
+Dizem que a Floresta dos Sussurros é habitada por seres mágicos e criaturas que não existem em nenhum outro lugar do mundo. Fadas enigmáticas, espíritos da natureza e bestas antigas vagam entre as árvores, protegendo os segredos da floresta. No centro dela, dizem que vive uma poderosa bruxa.
+                </p>
+            </div>
+        </div>
+
+        <div class="local">
+            <img src="magia.jpg" alt="Ruínas de Eldrath">
+            <div>
+                <h2>Escola De Magia/Energias & Bruxaria</h2>
+                <p>
+                    Escola Técnica de Magia e Bruxaria – Oculta nas profundezas do oceano infinito, essa academia flutuante é um mistério para o mundo exterior. Erguida sobre uma colossal ilha artificial, sustentada por feitiços ancestrais, a escola é cercada por tempestades místicas e criaturas abissais. Seus salões dourados e torres cristalinas refletem a luz da lua, enquanto os estudantes treinam para dominar as energias do universo—chakra, KI, mana e além. Apenas aqueles dignos conseguem atravessar o véu de ilusões e alcançar seus portões, onde segredos arcanos e provas implacáveis aguardam os novos aprendizes.
+                </p>
+            </div>
+        </div>
+
+        <div class="local">
+            <img src="deserto.jpg" alt="Ruínas de Eldrath">
+            <div>
+                <h2>Deserto Da Perdição</h2>
+                <p>
+                    O Deserto da Perdição é um vasto e implacável mar de areia, onde o sol queima sem piedade durante o dia e o frio cortante da noite congela até as almas mais resistentes. Este deserto é um lugar de extremos, onde a vida é escassa e a morte espreita em cada duna. Suas areias douradas se estendem até onde os olhos podem ver, interrompidas apenas por rochas negras e ossadas de criaturas que não sobreviveram à jornada.
+
+                    Dizem que o Deserto da Perdição foi criado por uma antiga maldição, lançada por um deus irado que transformou uma terra fértil e próspera em um deserto estéril. A maldição ainda paira sobre o local, e aqueles que entram no deserto sentem uma sensação de desespero e perdição, como se o próprio deserto estivesse sugando sua esperança e vitalidade.
+                    
+                    No coração do deserto, há uma cidade perdida conhecida como Arrakhal, outrora um centro de poder e riqueza, agora reduzida a ruínas cobertas pela areia. Dizem que Arrakhal guarda tesouros inimagináveis e conhecimentos proibidos, mas também é protegida por armadilhas mortais e guardiões esqueléticos que nunca descansam.
+                </p>
+            </div>
+        </div>
+
+        <div class="local">
+            <img src="montanhas de gelo.jpg" alt="Ruínas de Eldrath">
+            <div>
+                <h2>Montanhas De Gelo</h2>
+                <p>
+                    O Limite Gélido – Ao extremo norte do mundo conhecido, ergue-se uma muralha colossal de montanhas de gelo, estendendo-se além do horizonte como um abismo branco e sem fim. O frio aqui não é apenas mortal, mas sobrenatural, congelando até mesmo a energia vital dos desavisados. Ventos cortantes uivam entre as fendas titânicas, escondendo ruínas ancestrais soterradas sob eras de neve e trevas. Dizem que além dessas montanhas, nada existe—apenas um vazio eterno. No entanto, lendas sussurram sobre algo que desperta sob o gelo, algo que jamais deveria ser perturbado. Para prosseguir em QUALQUER AVENTURA, é ncessario atravessar as montanhas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Seção "A Aventura" -->
+        <div class="aventura">
+            <h2>A Aventura</h2>
+
+            <!-- A Cidadela Perdida -->
+            <div class="local">
+                <img src="perdida.jpg" alt="A Cidadela Perdida">
+                <div>
+                    <h2>A Cidadela Perdida</h2>
+                    <p>
+                        Escondida nas montanhas geladas do norte, a Cidadela Perdida é um lugar de mistério e perigo. Dizem que ela foi construída por uma civilização antiga que dominava o tempo. <strong>4 dias de caminhada</strong> são necessários para alcançá-la, enfrentando tempestades de neve e criaturas selvagens.
+                    </p>
+                </div>
+            </div>
+
+            <!-- O Vale dos Espectros -->
+            <div class="local">
+                <img src="vale.jpg" alt="O Vale dos Espectros">
+                <div>
+                    <h2>O Vale dos Espectros</h2>
+                    <p>
+                        Um vale assombrado onde os mortos não descansam em paz. Os viajantes relatam ouvir sussurros e ver sombras se movendo entre as árvores. <strong>3 dias de viagem</strong> separam os aventureiros deste lugar, mas muitos não retornam.
+                    </p>
+                </div>
+            </div>
+
+            <!-- A Ilha do Eclipse -->
+            <div class="local">
+                <img src="aqui.webp" alt="A Ilha do Eclipse">
+                <div>
+                    <h2>A Ilha do Eclipse</h2>
+                    <p>
+                        Localizada no coração do Mar Sombrio, a Ilha do Eclipse é cercada por lendas. Dizem que o próprio Soberano do Eclipse nasceu aqui. <strong>7 dias de navegação</strong> são necessários para alcançá-la, enfrentando monstros marinhos e tempestades.
+                    </p>
+                </div>
+            </div>
+
+            <!-- O Pico da Eternidade -->
+            <div class="local">
+                <img src="isso.avif" alt="O Pico da Eternidade">
+                <div>
+                    <h2>O Pico da Eternidade</h2>
+                    <p>
+                        Uma montanha tão alta que toca o céu. No topo, há um portal para outra dimensão, mas poucos sobrevivem à escalada. <strong>5 dias de subida</strong> são necessários, enfrentando ventos cortantes e avalanches.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão de Voltar -->
+        <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+    </main>
+</body>
+</html>

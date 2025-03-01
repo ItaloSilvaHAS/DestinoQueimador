@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore KI - Burned Fate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glow-box {
+            background: rgba(255, 0, 0, 0.2);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .glow-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+        }
+        .gif-container {
+            padding: 10px;
+            background: black;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="p-4 bg-red-900 flex justify-between items-center relative">
+        <div class="text-xl font-bold">Burned Fate</div>
+        <button id="menu-btn" class="text-white focus:outline-none">☰</button>
+        <ul id="menu" class="hidden absolute top-16 right-4 bg-red-900 p-4 rounded-lg space-y-2 shadow-lg">
+            <li><a href="index.html" class="block hover:text-gray-400">Início</a></li>
+            <li><a href="poderes.html" class="block hover:text-gray-400">Poderes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container mx-auto p-6">
+        <h1 class="text-5xl font-extrabold text-center text-red-500 mb-12">Árvore de Habilidades - KI</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Habilidades -->
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Força.gif" alt="Manto de Cura" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">A Energia Da Força</h2>
+                <p class="text-gray-300 mt-2">Com a consciencia que em seu corpo, o KI transborda, saiba que a energia com maior foco na mente e corpo está com você. Energia + Força = Seu KI. Seu KI ao ser coberto em torno de seu corpo, te da velocidade, força e uma destreza alta. Mas, acima de tudo
+                    esse poder requer muito treinamento. O KI é uma energia vital que flui através de todos os seres vivos. Ele pode ser utilizado para aumentar a força física, a velocidade e a resistência. Além disso, o KI pode ser canalizado para realizar ataques poderosos e técnicas defensivas. Com o treinamento adequado, um usuário pode dominar o controle do KI e alcançar níveis extraordinários de poder.
+                    A energia pode ser concentrada para, além de se fortificar, expelir para fora do corpo em forma de rajadas de energia, ou até mesmo em forma de explosões. Ao cobrir o corpo com o KI, a soma fica como: KI = Atributos Fisicos. </p>
+                </p>
+            </div>
+
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Treino.gif" alt="Força Implacável" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">O Treinamento</h2>
+                <p class="text-gray-300 mt-2">Os usuarios de KI treinam de forma exaustiva para conseguir manter a forma. Por serem extremamente esportivos, todos ganham um buff nativo de 2x de EXP para qualquer atividade que tenha pontos.
+            </div>
+            
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="aaa.gif" alt="Regeneração de Membros" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">SpeedAttack</h2>
+                <p class="text-gray-300 mt-2">A velocidade é um fator decisivo em qualquer combate, e os usuários de ki têm um domínio absoluto sobre ela. Ao ativar SpeedAttack, o usuário alcança uma velocidade absurda em seus ataques, permitindo que executem golpes rápidos e precisos, independentemente do peso ou resistência do adversário. O poder do ataque é aumentado pela rapidez com que o golpe é executado, tornando difícil para o inimigo reagir a tempo. Além disso, durante o efeito de SpeedAttack, a precisão é maximizada, garantindo que cada golpe atinja seu alvo com uma precisão quase infalível. A habilidade exige um alto consumo de ki, mas se usada corretamente, pode transformar o curso da batalha, permitindo que o usuário desferir uma série de ataques rápidos antes que o inimigo consiga reagir
+                    
+            </div>
+
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="tp.gif" alt="Força Implacável" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Teleporte</h2>
+                <p class="text-gray-300 mt-2">Usando o ki, o usuário pode se teletransportar para qualquer lugar que esteja visualizando. Requer concentração e energia suficiente. Mas qualquer erro na concentração ou desvio de KI, é o suficiente para fazer
+                    o usuario falhar.</p>
+            </div>
+            
+
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Kai.gif" alt="Força Implacável" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Kaioken 2/4/8/10/20x</h2>
+                <p class="text-gray-300 mt-2">O "Kaioken" aumenta temporariamente a força e velocidade do usuário, mas também sobrecarrega o corpo, causando dano interno após o uso prolongado. O Kaioken pode ser ativado em diferentes níveis, cada um aumentando a força e velocidade do usuário em uma quantidade específica. Quanto maior o nível do Kaioken, maior o aumento de poder, mas também maior o dano interno causado. O Kaioken pode ser usado por um máximo de 3 turnos, após os quais o usuário sofre o dano interno correspondente ao nível do Kaioken ativado. O Kaioken é uma técnica extremamente poderosa, mas também perigosa, e deve ser usada com cautela.</p>
+
+                   <LI> Kaioken 2x – Aumenta a força e velocidade do usuário com KI em 20% por 3 turnos. Após o efeito, o usuário sofre de dano interno. </li> <br>
+                    
+                    <li> Kaioken 4x – Aumenta a força e velocidade do usuário com KI 40% por 3 turnos. Após o efeito, o usuário sofre de dano interno mais intensos, não conseguindo mais se mover por 1 turno. </li> <br>
+                    
+                   <li> Kaioken 8x – Aumenta a força e velocidade do usuário com KI 80% por 3 turnos. Após o efeito, o usuário sofre de dano interno e externos, agora com o corpo ferido, tem dificuldade para respirar e se mover por 2 turnos. </li> <br>
+                    
+                   <li> Kaioken 10x – Aumenta a força e velocidade do usuário com KI 100% por 3 turnos. Após o efeito, o usuário sofre de dano interno, externos e consegue sentir ate mesmo a alma desgastada. Após o uso, desmaio imediato. </li> <br>
+                    
+                  <li>  Kaioken 20x – Aumenta a força e velocidade do usuário com KI 200% por 1 turno. Após o efeito, o usuário sofre de danos não reparaveis, e se passar por mais de 1 turno sem auxilio, morre imediatamente..</p> </li> <br>
+
+                  <p>Isso significa, que a Força e Velocidade (com KI, ou seja, KI + Esses atributos), vai ser somada com a porcentagem do Kaioken. Realmente uma tecnica muito forte, mas mortal.</p>
+
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>
+
+

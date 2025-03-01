@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Habilidades - Demônios</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background: radial-gradient(circle, #1a0000, #0a0a0a);
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        aside {
+            width: 100%;
+            background: linear-gradient(to right, #300000, #111);
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        aside h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            color: #ff0000;
+            margin-bottom: 15px;
+        }
+
+        aside nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        aside nav ul li {
+            margin: 10px;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        aside nav ul li a:hover {
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px;
+            background: #1a1a1a;
+            text-align: center;
+        }
+
+        main h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3rem;
+            color: #ff0000;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        }
+
+        .descricao {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+
+        .habilidades-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .habilidade {
+            width: 90%;
+            max-width: 350px;
+            background: rgba(255, 0, 0, 0.15);
+            padding: 20px;
+            margin: 15px;
+            border-left: 4px solid #ff0000;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .habilidade:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        }
+
+        .habilidade h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.8rem;
+            color: #ff0000;
+            margin-top: 10px;
+        }
+
+        .habilidade p {
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .requisitos {
+            font-weight: bold;
+            color: #ff6666;
+            margin-top: 5px;
+        }
+
+        footer {
+            background: #111;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="races.html">Raças</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h1>Árvore de Habilidades - Demônios</h1>
+        <p class="descricao">
+            Os demônios podem aprender qualquer tipo de energia, mas possuem uma afinidade natural superior com a mana.
+            Sua essência sombria lhes concede habilidades destrutivas e um poder crescente conforme mergulham no caos da batalha.
+        </p>
+        <div class="habilidades-container">
+            <div class="habilidade">
+                <h2>Chamas do Inferno</h2>
+                <p class="requisitos">Requer: Nível 10 | 15K pontos em Força</p>
+                <p>Demonios podem conjurar chamas vindas diretamente do inferno, chamas que machucam na alma e causam feridas incuraveis.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Contrato De Sangue</h2>
+                <p class="requisitos">Requer: Nível 20 | 50K pontos em Defesa</p>
+                <p>Atráves do sangue, o demonio pode forma um pacto que burla ate mesmo as leis da casualidade e realidade. Desde que nenhum dos lados sejam quebrados, todos saem com beneficios. Se um dos lados for quebrado, sofreram as consequencias.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Fúria Sangrenta</h2>
+                <p class="requisitos">Requer: Nível 30 | 90K pontos em Energia</p>
+                <p>Quanto mais ferido, mais poderoso o demônio se torna, alimentando-se de sua própria dor. A cada cena, seus atributos sobem em 20%. Após a luta, seus atributos retornam ao normal.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Corrupção Sombria</h2>
+                <p class="requisitos">Requer: Nível 40 | 160K pontos em Determinação</p>
+                <p>Os ataques drenam energia dos inimigos e fortalecem o demônio, desde que sua determinação seja superior à do adversário.</p>
+            </div>
+        </div>
+
+        <div class="habilidade">
+            <h2>Orbe Sombrio</h2>
+            <p class="requisitos">Requer: Nível 50 | 250K pontos em Determinação</p>
+            <p>O demonio ganha uma habilidade, que ao tocar no alvo, consegue extrair um orbe com todas as informações dele. Seja DNA, poder, capacidade fisicas, atributos, e ate mesmo memorias. Absolutamente tudo que esta marcado na alma do alvo, o orbe saberá e se tornará conhecimento do demonio.</p>
+        </div>
+    </div>
+
+        <h2 style="margin-top: 30px;">Mais habilidades em breve...</h2>
+    </main>
+
+    <footer>
+        <p>© 2025 Eclipse Eternal. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

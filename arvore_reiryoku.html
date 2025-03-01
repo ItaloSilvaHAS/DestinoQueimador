@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Reiryoku - Burned Fate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glow-box {
+            background: rgba(0, 0, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 0, 255, 0.8);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .glow-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 0, 255, 1);
+        }
+        .gif-container {
+            padding: 10px;
+            background: black;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+        }
+        .hidden-section { display: none; }
+        .active-section { display: block; }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="p-4 bg-red-900 flex justify-between items-center relative">
+        <div class="text-xl font-bold">Burned Fate</div>
+        <button id="menu-btn" class="text-white focus:outline-none">☰</button>
+        <ul id="menu" class="hidden absolute top-16 right-4 bg-red-900 p-4 rounded-lg space-y-2 shadow-lg">
+            <li><a href="index.html" class="block hover:text-gray-400">Início</a></li>
+            <li><a href="poderes.html" class="block hover:text-gray-400">Poderes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container mx-auto p-6 text-center">
+        <h1 class="text-5xl font-extrabold text-red-500 mb-8">Árvore de Habilidades - Reiryoku</h1>
+        <div class="flex justify-center gap-4 mb-6">
+            <button id="btn-virtuoso" class="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white font-bold rounded-lg">Virtuoso</button>
+            <button id="btn-vazio" class="px-6 py-3 bg-red-600 hover:bg-red-800 text-white font-bold rounded-lg">Vazio</button>
+        </div>
+    </div>
+    
+    <!-- Seção Virtuoso -->
+    <div id="virtuoso" class="container mx-auto p-6 active-section">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Exemplo de Habilidade -->
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="ichi.gif" alt="Habilidade 1" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">A Ascenção Das Almas</h2>
+                <p class="text-gray-300 mt-2">Uma enorme quantidade de energia espirtual sai de seu corpo de forma descontrolada, no momento em que se toma consciencia dessa energia. Aprender a controlar é o primeiro passo; Essa é sua Reiatsu. Definida pela 
+                    quantidade da Energia + Determinação, quanto maior for esses atributos, maior será sua Reiatsu. A Reiatsu é a energia espiritual que todo ser vivo possui, pós simboliza a alma, e é a base para a realização de técnicas espirituais.
+                </p>
+            </div>
+            
+            <!-- Repita para mais 4 habilidades -->
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="shunpo.gif" alt="Habilidade 2" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">Shunpo</h2>
+                <p class="text-gray-300 mt-2">O Shunpo, também conhecido por passo flash, uma habilidade daqueles que possuem uma grande alma, para se deslocar com alta velocidade, da mesma forma que o Sonido. 
+               Shunpo é uma habilidade importante para a maioria dos usuarios de reiatsu, pós incorpora o valor de sua energia para velocidade. O nível de habilidade de Shunpo pode ser aprimorado e aprimorado através da concentração, treinamento e domínio dele.
+                </p>
+            </div>
+            
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Hakuda.webp" alt="Habilidade 3" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">Hakuda</h2>
+                <p class="text-gray-300 mt-2">O Hakuda se resume em um estilo de combate corpo-a-corpo em que a pessoa está desarmada e usa apenas o corpo. Nesse caso, os golpes daquele que porta uma alma grandiosa, poderão acerta os impactos de seus golpes e força baseado em sua energia espirtual, unindo com seu arsenal de tecnicas Hakuda.</p>
+            </div>
+            
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="kido.webp" alt="Kido" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">Kidō</h2>
+                <p class="text-gray-300 mt-2">Kidō é a técnica que os portadores de almas grandiosas utilizam concentrando sua Energia Espiritual em encantamentos mágicos. 
+                    Estes encantamentos servem à uma grande variedade de usos como cura, defesa ou combate. São classificados em uma escala de 1 a 99, o último sendo o mais poderoso é o mais difícil de se executar.
+
+                    A escala de 1-99 é uma medida de dificuldade e não uma lista de itens, o que significa que pode haver mais de um Kidō por nível. Para se usar um Kidō, primeiro deve-se recitar seu encantamento, chamar o número de seu nível e então dizer o nome do encantamento. Para aqueles com muita habilidade em um Kidō em particular, recitar o encantamento não é necessário, mas recitando irá aumentar o poder do encantamento.
+                    
+                    Existem três tipos principais de Kidō: técnicas de aprisionamento (Bakudō), destruição (Hadō) e cura. Técnicas de aprisionamento são uma categoria geral que se refere a tudo designado a fim de impedir ou dissuadir um inimigo. Técnicas de destruição referem-se a tudo designado especificamente para prejudicar o inimigo. E técnicas de cura - que não requerem nomes, níveis ou encantamentos para se usar - simplesmente curam seus companheiros.
+                    
+                    </p>
+            </div>
+            
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Bankai.gif" alt="Habilidade 5" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">Zanpakutō</h2>
+                <p class="text-gray-300 mt-2">As Zanpakutō são espadas criadas a partir da alma do usuario, que possuem liberações, que funcionam de forma à expor as habilidades ocultas das espadas.
+                     Os níveis de liberação são: Asauchi, Shikai e Bankai. Nos estágios de Shikai e Bankai, as armas assumem aparências distintas e únicas, 
+                    além disso, de acordo com a liberação utilizada, seus portadores têm acessos à distintos poderes e habilidades. <br> <br>
+                    <li>Asauchi: A forma básica da Zanpakutō, que é formada a partir da alma do Virtuoso quando atinge a grandeza. </li><br> 
+                   <li> Shikai: A segunda forma da Zanpakutō, que é liberada ao se conhecer o nome da espada. Assim que o portador da Zanpakutōs entra em sintonia com ela e alcança um certo nível de força, ele é capaz de ouvir o chamado de sua Zanpakutou, que diz seu nome. Ao chamar por esse nome, o portador é capaz de invocar a verdadeira forma de sua Zampakutou, que adquire um novo poder. </li><br>
+                   <li> Bankai: A terceira forma da Zanpakutō, que é liberada ao se conhecer o nome da espada e dominar sua liberação Shikai. É a forma suprema de uma Zanpakutō, e ocorre quando o usuário é capaz de materializar a entidade que vive dentro de sua espada para o mundo real. Para realizar tal ato, muitos anos de treino e experiencia são necessários. São necessários 10 anos de treinamento para domina-lo.
+
+                   </li> <br>
+
+                   <p>Esses são os niveis das zanpakutous. Muito treino é necessario para alcançar somente a Asauchi, quando o portador da alma grandiosa atingir o LEVEL 50. a partir dela, o verdadeiro treino começa, ate a perfeiçoar suas tecnicas e conhecer a si mesmo como ninguem. Os buffs das habilidades, dependem da zanpakutou do usuario.</p>
+
+        
+
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Seção Vazio -->
+    <div id="vazio" class="container mx-auto p-6 hidden-section text-center">
+
+        <!-- Seção Virtuoso -->
+    <div id="virtuoso" class="container mx-auto p-6 active-section">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Exemplo de Habilidade -->
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="arrankar.gif" alt="Habilidade 1" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">A Ascenção Das Almas</h2>
+                <p class="text-gray-300 mt-2">Uma enorme quantidade de energia espirtual sai de seu corpo de forma descontrolada, no momento em que se toma consciencia dessa energia. Aprender a controlar é o primeiro passo; Essa é sua Reiatsu. Definida pela 
+                    quantidade da Energia + Determinação, quanto maior for esses atributos, maior será sua Reiatsu. A Reiatsu é a energia espiritual que todo ser vivo possui, pós simboliza a alma, e é a base para a realização de técnicas espirituais.
+                </p>
+            </div>
+        
+
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Sonido.webp" alt="Habilidade 2" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">Sonido</h2>
+                <p class="text-gray-300 mt-2">O sonido é uma técnica de movimento de alta velocidade, que ao contrario de incoporar sua energia para velocidade, ele dobra. Aumentando em 100% a velocidade do usuario.</p>
+                </p>
+            </div>
+
+
+
+              
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="Hakuda2.gif" alt="Habilidade 5" class="w-fulAo contrario do que se esperaria, os "Vazio" não despertam uma espada. A Resurrección é uma transformação em que o Arrancar retorna a essência de suas habilidades ofensivas como um Hollow à sua forma humanoide. Os Arrancares assumem essas formas ao liberarem as suas Zanpakutō.l h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-300">Hakuda</h2>
+                <p class="text-gray-300 mt-2">A arte de acertas golpes certeiros, rápidos e brutais muda um pouco desse lado, pós a força não é embuida a energia espiritual, mas sim multiplicada. Os "Vazio" com uma alma grande, podem dobrar atributos fisicos.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="glow-box p-6 text-center">
+        <div class="gif-container mx-auto mb-4">
+            <img src="Cero.gif" alt="Habilidade 2" class="w-full h-40 object-cover">
+        </div>
+        <h2 class="text-3xl font-bold text-blue-300">Kudo</h2>
+        <p class="text-gray-300 mt-2">A contra parte do Kido. O Kudo utiliza de energia para forma feitiços única e exclusivamente destrutivos, moldando a energia espirtual e dobrando momentaneamente na hora de atacar. Rápido, letal, e eficaz.</p>
+        </p>
+    </div>
+
+    <div class="glow-box p-6 text-center">
+        <div class="gif-container mx-auto mb-4">
+            <img src="Cero.gif" alt="Habilidade 2" class="w-full h-40 object-cover">
+        </div>
+        <h2 class="text-3xl font-bold text-blue-300">Resurrección</h2>
+        <p class="text-gray-300 mt-2">Ao contrario do que se esperaria, os "Vazio" não despertam uma espada.
+             A Resurrección é uma transformação em que os vazio retorna a essência de suas habilidades ofensivas usando toda seu poder espiritual à sua forma humanoide. Os vazios assumem essas formas ao liberarem as suas Zanpakutō. Mudando de 
+             aparencia e atingindo um novo patamar de força. A liberação de um Arrancar aumenta drasticamente a sua viabilidade em batalha e o próprio poder do vazio em questão,
+              permitindo a eles acesso pleno de seus poderes e habilidades. Os resultados gerais são o aumento de velocidade, estamina, durabilidade, força e até mesmo do poder espiritual. Nesse estado o vazio pode usar suas habilidades de forma mais eficaz e poderosa,
+              e até mesmo desbloquear novas habilidades que não poderiam ser usadas anteriormente. </p> <br>
+
+              <li> Forma Base: O vazio se assemelha a um humano, como ele realmente é em vida. Sua força espiritual é grande, mas nada muito anomalo.</li> <br>
+              <li> Resurrección: Ao ativar essa transformação, o vazio libera seu poder, e sua alma fica equivalente a todos os seus atributos fisicos.</li> <br>
+              <li> Segunda Etapa: O vazio atinge um patamar de poder nunca antes visto, sua energia espirtual (Energia+Determinação) é multiplicada em 2x, juntamente com o beneficio da Resurrección.</li>
+        </p> <br>
+        <p>Este são as formas dos vazios. Eles possuem um grande poder, mas os Virtuosos também. Ambos em um conflito talvez eterno...</p>
+    </div>
+
+
+        <!-- Vazio: Nenhum conteúdo mostrado -->
+    </div>
+    
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            document.getElementById("menu").classList.toggle("hidden");
+        });
+        
+        document.getElementById("btn-virtuoso").addEventListener("click", function () {
+            document.getElementById("virtuoso").classList.add("active-section");
+            document.getElementById("virtuoso").classList.remove("hidden-section");
+            document.getElementById("vazio").classList.add("hidden-section");
+            document.getElementById("vazio").classList.remove("active-section");
+        });
+        
+        document.getElementById("btn-vazio").addEventListener("click", function () {
+            document.getElementById("vazio").classList.add("active-section");
+            document.getElementById("vazio").classList.remove("hidden-section");
+            document.getElementById("virtuoso").classList.add("hidden-section");
+            document.getElementById("virtuoso").classList.remove("active-section");
+        });
+    </script>
+</body>
+</html>

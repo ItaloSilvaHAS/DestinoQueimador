@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Habilidades - Apóstolos</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background: radial-gradient(circle, #1a1a1a, #0a0a0a);
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        aside {
+            width: 100%;
+            background: linear-gradient(90deg, #111, #220000);
+            padding: 20px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        aside h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            color: #b30000;
+            margin-bottom: 15px;
+        }
+
+        aside nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        aside nav ul li {
+            margin: 10px;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        aside nav ul li a:hover {
+            color: #b30000;
+            transform: scale(1.1);
+        }
+
+        main {
+            flex: 1;
+            padding: 50px 20px;
+            background: #1a1a1a;
+            text-align: center;
+        }
+
+        main h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3.2rem;
+            color: #b30000;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.5);
+        }
+
+        .habilidades-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .habilidade {
+            width: 90%;
+            max-width: 350px;
+            background: rgba(139, 0, 0, 0.2);
+            padding: 20px;
+            margin: 15px;
+            border-left: 5px solid #b30000;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .habilidade:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .habilidade h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.9rem;
+            color: #b30000;
+            margin-top: 10px;
+        }
+
+        .habilidade p {
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        @media (min-width: 768px) {
+            .habilidades-container {
+                justify-content: space-around;
+            }
+            .habilidade {
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="races.html">Raças</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h1>Árvore de Habilidades - Apóstolos</h1>
+        <div class="habilidades-container">
+            <div class="habilidade">
+                <h2>Regeneração</h2>
+                <p><strong>Requer:</strong>10K pontos em Resistência</p>
+                <p>O apóstolo ganha uma regeneração, que vai além da humana. Quanto maior for sua resistencia, maior sera o nivel da sua regeneração. Indo da base, que é regenerar membros perdidos em segundos, ate conseguir chegar em niveis molecular.</p>
+            </div>
+            <div class="habilidade">
+                <h2>Corrupção Profana</h2>
+                <p><strong>Requer:</strong> 20K pontos em Energia</p>
+                <p>Os ataques do usuário espalham uma energia demoníaca que enfraquece inimigos e fortalece aliados. A cada golpe, os atributos de seus inimigos diminuem e 10% e os dos aliados aumentam em 20%</p>
+            </div>
+
+            <div class="habilidade">
+                <h2>Sacrificios</h2>
+                <p><strong>Requer:</strong> 50K pontos em Determinação</p>
+                <p>O apóstolo é capaz de sacrificar um atributo (de sua escolha) permanente, para aumentar a força de outro com os números do atributo antigo que foi sacrificado. Com cada atributo tendo sua consequencia.</p>
+            </div>
+
+            <div class="habilidade">
+                <h2>Forma Apóstolo</h2>
+                <p><strong>Requer:</strong> 50K pontos em Força</p>
+                <p>O Apóstolo pode se transforma na sua verdadeira forma. Ganhando um buff de 2x em todos os seus atributos, a forma do apostolo é definida com sua ambição, se tornando mais forte, mais resistente e etc.</p>
+            </div>
+
+            <div class="habilidade">
+                <h2>Os 5 Anjos</h2>
+                <p><strong>Requer:</strong> 1M pontos em Força</p>
+                <p>O apóstolo pode ser abençoado pelos 5 grandes anjos, adqurindo um poder inimaginavel.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

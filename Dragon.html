@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raça Dragão - A Era do Eclipse</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Barra Lateral */
+        aside {
+            width: 250px;
+            background-color: #111;
+            padding: 20px;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        aside h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.8rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        aside nav ul {
+            list-style: none;
+        }
+
+        aside nav ul li {
+            margin-bottom: 15px;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        aside nav ul li a:hover {
+            color: #ff4444;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            flex: 1;
+            padding: 40px;
+            background-color: #1a1a1a;
+            overflow-y: auto;
+        }
+
+        main h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        .raca {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            background-color: rgba(255, 68, 68, 0.1);
+            padding: 20px;
+            border-left: 4px solid #ff4444;
+            border-radius: 5px;
+        }
+
+        .raca img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+            border: 3px solid #ff4444;
+        }
+
+        .raca h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            color: #ff4444;
+            margin-bottom: 10px;
+        }
+
+        .raca p {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .raca ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .raca ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Botão de Voltar */
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4444;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .btn-voltar:hover {
+            background-color: #cc0000;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+                padding: 15px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            }
+
+            aside h2 {
+                font-size: 1.5rem;
+            }
+
+            aside nav ul li a {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            main h1 {
+                font-size: 2.5rem;
+            }
+
+            .raca {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .raca img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .raca h2 {
+                font-size: 1.8rem;
+            }
+
+            .raca p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra Lateral -->
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="races.html">Raças</a></li>
+                <li><a href="Sistemas.html">Sistemas</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <h1>Raça Dragão</h1>
+
+        <!-- Descrição da Raça Dragão -->
+        <div class="raca">
+            <img src="dragon.webp" alt="Dragão">
+            <div>
+                <h2>Dragões</h2>
+                <p>
+                    Os dragões são seres lendários, dotados de uma força e sabedoria incomparáveis. Nascidos da essência dos elementos primordiais, eles são os guardiões dos segredos mais antigos do mundo. Sua forma humana é uma manifestação de sua habilidade de se adaptar e conviver com outras raças, mas sua verdadeira natureza é revelada em sua forma draconiana, onde seu poder é desencadeado em toda a sua magnitude.
+                </p>
+                <h3>Características:</h3>
+                <ul>
+                    <li><strong>Longevidade Milenar:</strong> Dragões vivem por milhares de anos, acumulando conhecimento e poder ao longo das eras. Sua experiência os torna estrategistas excepcionais.</li>
+                    <li><strong>Vinculo Elemental:</strong> Cada dragão está intrinsecamente ligado a um elemento primordial, como fogo, gelo, eletricidade, terra, luz, sombra, vazio, infinito. Esse vínculo define suas habilidades e personalidade.</li>
+                    <li><strong>Forma Humana:</strong> Dragões podem assumir uma forma humana para se infiltrar entre outras raças. Nessa forma, eles retêm parte de suas habilidades, mas sua verdadeira força só é revelada em sua forma draconiana.</li>
+                    <li><strong>Forma Híbrida:</strong> Uma forma intermediária entre humano e dragão, onde o corpo do dragão ganha características draconianas, como escamas parciais, garras afiadas e olhos brilhantes. Nessa forma, sua energia e força são aumentadas em 50%, permitindo combates mais intensos sem perder completamente a agilidade humana.</li>
+                    <li><strong>Forma Dragão:</strong> Uma forma que o dragão alcança todo o seu poder. Ele ganha caracteristicas de uma verdadeira criatura mitica, conseguindo um buff de 100% em energia e força.</li>
+
+                </ul>
+                <h3>Habilidades Únicas:</h3>
+                <ul>
+                    <li><strong>Sopro Primordial:</strong> Um ataque devastador que canaliza o elemento nativo do dragão. O sopro pode incendiar florestas, congelar mares ou desencadear tempestades elétricas, dependendo do elemento.</li>
+                    <li><strong>Barreira Elemental:</strong> Dragões podem conjurar uma barreira de energia que os protege de ataques baseados em seu elemento nativo. Além disso, eles são imunes a efeitos adversos relacionados ao seu elemento.</li>
+                    <li><strong>Visão do Predador:</strong> Sua visão aguçada permite enxergar através da escuridão mais absoluta e detectar presas ou inimigos a quilômetros de distância.</li>
+                    <li><strong>Força do Titã:</strong> Em sua forma draconiana, dragões possuem uma força física incomparável, capaz de destruir fortalezas e levantar montanhas com facilidade.</li>
+                    <li><strong>Presença Aterrorizante:</strong> A mera presença de um dragão pode paralisar inimigos mais fracos, causando medo e desespero. Criaturas inferiores podem fugir ou se render diante de um dragão.</li>
+                    <li><strong>Regeneração Draconiana:</strong> Dragões possuem uma capacidade regenerativa incrível, curando ferimentos graves em questão de minutos. Ferimentos menores são curados quase instantaneamente.</li>
+                   
+                    <br> <br> <br>
+
+                    <center> <h1> Habilidade Suprema </h1></center>
+
+                    <h2>Forma Dragão Suprema</h2>
+                    <p><strong>Requer:</strong> 1M pontos em Força</p>
+                    <p>O Dragão pode se transformar em sua forma suprema, ganhando um buff de 2x em todos os seus atributos. Ganha acesso ao conceito do seu proprio elemento primordial, se tornando um so com a realidade.</p>
+
+
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Botão de Voltar -->
+        <a href="racas.html" class="btn-voltar">Voltar para Raças</a>
+    </main>
+</body>
+</html>

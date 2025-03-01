@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Vital - Burned Fate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glow-box {
+            background: rgba(255, 0, 0, 0.2);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .glow-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+        }
+        .gif-container {
+            padding: 10px;
+            background: black;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="p-4 bg-red-900 flex justify-between items-center relative">
+        <div class="text-xl font-bold">Burned Fate</div>
+        <button id="menu-btn" class="text-white focus:outline-none">☰</button>
+        <ul id="menu" class="hidden absolute top-16 right-4 bg-red-900 p-4 rounded-lg space-y-2 shadow-lg">
+            <li><a href="index.html" class="block hover:text-gray-400">Início</a></li>
+            <li><a href="poderes.html" class="block hover:text-gray-400">Poderes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container mx-auto p-6">
+        <h1 class="text-5xl font-extrabold text-center text-red-500 mb-12">Árvore de Habilidades - Energia Vital</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Habilidades -->
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="vibra.gif" alt="Manto de Cura" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Manto da Renovacão</h2>
+                <p class="text-gray-300 mt-2">O usuário envolve seu corpo em uma aura verde vibrante, acelerando drasticamente sua regeneração. Ferimentos graves desaparecem em segundos, tornando-o quase imortal em combate.</p>
+            </div>
+
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="piun.gif" alt="Força Implacável" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Golpe Vital</h2>
+                <p class="text-gray-300 mt-2">Canalizando sua energia vital no punho, o usuário desferre um golpe devastador. O impacto é equivalente à soma de sua força e energia, capaz de destruir barreiras e lançar inimigos para longe. Dependendo do nivel, distorcer ate mesmo o ar.</p>
+            </div>
+            
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="rege.webp" alt="Regeneração de Membros" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Essência Eterna</h2>
+                <p class="text-gray-300 mt-2">O corpo do usuário se torna um templo de recuperação absoluta. Mesmo membros amputados são restaurados em questão de minutos, tornando-o um guerreiro impossível de incapacitar.</p>
+            </div>
+
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="hina.gif" alt="Força Implacável" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Toque Ancião</h2>
+                <p class="text-gray-300 mt-2"> Golpe preciso que atinge os centros vitais da energia do inimigo, interrompendo sua circulação espiritual. A vítima se torna incapaz de utilizar habilidades até que sua energia se estabilize novamente.</p>
+            </div>
+            
+
+            <div class="glow-box p-6 text-center">
+                <div class="gif-container mx-auto mb-4">
+                    <img src="trans.gif" alt="Força Implacável" class="w-full h-40 object-cover">
+                </div>
+                <h2 class="text-3xl font-bold text-red-300">Forma Primordial</h2>
+                <p class="text-gray-300 mt-2">O usuário desperta seu potencial máximo, envolto em uma aura esverdeada flamejante. Sua força e energia dobram instantaneamente, tornando-o uma força imparável no campo de batalha.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>
+
+

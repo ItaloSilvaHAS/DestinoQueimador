@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas - A Era do Eclipse</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Barra Lateral */
+        aside {
+            width: 250px;
+            background-color: #111;
+            padding: 20px;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        aside h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.8rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        aside nav ul {
+            list-style: none;
+        }
+
+        aside nav ul li {
+            margin-bottom: 15px;
+        }
+
+        aside nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        aside nav ul li a:hover {
+            color: #ff4444;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            flex: 1;
+            padding: 40px;
+            background-color: #1a1a1a;
+            overflow-y: auto;
+        }
+
+        main h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3rem;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Abas de Sistemas */
+        .abas {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .abas button {
+            background-color: #ff4444;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .abas button:hover {
+            background-color: #cc0000;
+        }
+
+        .abas button.ativo {
+            background-color: #cc0000;
+        }
+
+        .conteudo-abas {
+            background-color: rgba(255, 68, 68, 0.1);
+            padding: 20px;
+            border-left: 4px solid #ff4444;
+            border-radius: 5px;
+        }
+
+        .conteudo-abas div {
+            display: none;
+        }
+
+        .conteudo-abas div.ativo {
+            display: block;
+        }
+
+        /* Botão de Voltar */
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4444;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .btn-voltar:hover {
+            background-color: #cc0000;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+                padding: 15px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            }
+
+            aside h2 {
+                font-size: 1.5rem;
+            }
+
+            aside nav ul li a {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            main h1 {
+                font-size: 2.5rem;
+            }
+
+            .abas {
+                flex-direction: column;
+            }
+
+            .abas button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra Lateral -->
+    <aside>
+        <h2>Navegação</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="story.html">História</a></li>
+                <li><a href="pp.html">Personagens</a></li>
+                <li><a href="mapa.html">O Mundo</a></li>
+                <li><a href="races.html">Raças</a></li>
+                <li><a href="Sistemas.html">Sistemas</a></li>
+                <li><a href="rules.html">Regras</a></li>
+                <li><a href="comu.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <h1>Sistemas</h1>
+
+        <!-- Abas de Sistemas -->
+        <div class="abas">
+            <button class="ativo" onclick="mostrarAba('niveis')">Sistema de Níveis</button>
+            <button onclick="mostrarAba('hierarquia')">Hierarquia</button>
+            <button onclick="mostrarAba('missao')">Missão Principal</button>
+            <button onclick="mostrarAba('historia-secundaria')">História Secundária</button>
+            <button onclick="mostrarAba('historia-propria')">História Própria</button>
+            <button onclick="mostrarAba('conquista')">Conquistas</button>
+            <button onclick="mostrarAba('combate')">Combate</button>
+            <button onclick="mostrarAba('Treino')">Treinamento</button>
+            <button onclick="mostrarAba('atributos')">Atributos</button>
+            <button onclick="mostrarAba('nivelamento')">Nivelamento</button>
+          <!-- Botão de Energias -->
+<button onclick="mostrarAba('energia')">Sistema de Energias</button>
+
+        </div>
+        </div>
+
+        <!-- Conteúdo das Abas -->
+        <div class="conteudo-abas">
+            <!-- Sistema de Níveis -->
+            <!-- Sistema de Níveis -->
+<div id="niveis" class="ativo">
+    <h2>Sistema de Níveis</h2>
+    <p>
+        Os personagens ganham experiência (XP) ao completar missões, derrotar inimigos e superar desafios. Cada nível desbloqueia novas habilidades e aumenta os atributos do personagem.
+        O seu nível é definido de acordo com seus atributos totais (sem contar buff). Seguindo a lista a seguir:
+    </p>
+    
+    <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #ff4444; color: white;">
+                <th>Nível</th>
+                <th>Experiência Necessária</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Level 1</td><td>5.000 PTS</td></tr>
+            <tr><td>Level 2</td><td>10.000 PTS</td></tr>
+            <tr><td>Level 3</td><td>15.000 PTS</td></tr>
+            <tr><td>Level 4</td><td>20.000 PTS</td></tr>
+            <tr><td>Level 5</td><td>25.000 PTS</td></tr>
+            <tr><td>Level 6</td><td>30.000 PTS</td></tr>
+            <tr><td>Level 7</td><td>35.000 PTS</td></tr>
+            <tr><td>Level 8</td><td>40.000 PTS</td></tr>
+            <tr><td>Level 9</td><td>45.000 PTS</td></tr>
+            <tr><td>Level 10</td><td>50.000 PTS</td></tr>
+            <tr><td>Level 11</td><td>55.000 PTS</td></tr>
+            <tr><td>Level 12</td><td>60.000 PTS</td></tr>
+            <tr><td>Level 13</td><td>65.000 PTS</td></tr>
+            <tr><td>Level 14</td><td>70.000 PTS</td></tr>
+            <tr><td>Level 15</td><td>75.000 PTS</td></tr>
+            <tr><td>Level 16</td><td>80.000 PTS</td></tr>
+            <tr><td>Level 17</td><td>85.000 PTS</td></tr>
+            <tr><td>Level 18</td><td>90.000 PTS</td></tr>
+            <tr><td>Level 19</td><td>95.000 PTS</td></tr>
+            <tr><td>Level 20</td><td>100.000 PTS</td></tr>
+            <tr><td>Level 21</td><td>110.000 PTS</td></tr>
+            <tr><td>Level 22</td><td>120.000 PTS</td></tr>
+            <tr><td>Level 23</td><td>130.000 PTS</td></tr>
+            <tr><td>Level 24</td><td>140.000 PTS</td></tr>
+            <tr><td>Level 25</td><td>150.000 PTS</td></tr>
+            <tr><td>Level 26</td><td>160.000 PTS</td></tr>
+            <tr><td>Level 27</td><td>170.000 PTS</td></tr>
+            <tr><td>Level 28</td><td>180.000 PTS</td></tr>
+            <tr><td>Level 29</td><td>190.000 PTS</td></tr>
+            <tr><td>Level 30</td><td>200.000 PTS</td></tr>
+            <tr><td>Level 31</td><td>215.000 PTS</td></tr>
+            <tr><td>Level 32</td><td>230.000 PTS</td></tr>
+            <tr><td>Level 33</td><td>245.000 PTS</td></tr>
+            <tr><td>Level 34</td><td>260.000 PTS</td></tr>
+            <tr><td>Level 35</td><td>275.000 PTS</td></tr>
+            <tr><td>Level 36</td><td>290.000 PTS</td></tr>
+            <tr><td>Level 37</td><td>305.000 PTS</td></tr>
+            <tr><td>Level 38</td><td>320.000 PTS</td></tr>
+            <tr><td>Level 39</td><td>335.000 PTS</td></tr>
+            <tr><td>Level 40</td><td>350.000 PTS</td></tr>
+            <tr><td>Level 41</td><td>370.000 PTS</td></tr>
+            <tr><td>Level 42</td><td>390.000 PTS</td></tr>
+            <tr><td>Level 43</td><td>410.000 PTS</td></tr>
+            <tr><td>Level 44</td><td>430.000 PTS</td></tr>
+            <tr><td>Level 45</td><td>450.000 PTS</td></tr>
+            <tr><td>Level 46</td><td>470.000 PTS</td></tr>
+            <tr><td>Level 47</td><td>490.000 PTS</td></tr>
+            <tr><td>Level 48</td><td>510.000 PTS</td></tr>
+            <tr><td>Level 49</td><td>530.000 PTS</td></tr>
+            <tr><td>Level 50</td><td>550.000 PTS</td></tr>
+            <tbody>
+                <tr><td>Level 51</td><td>570,000 PTS</td></tr>
+                <tr><td>Level 52</td><td>590,000 PTS</td></tr>
+                <tr><td>Level 53</td><td>610,000 PTS</td></tr>
+                <tr><td>Level 54</td><td>630,000 PTS</td></tr>
+                <tr><td>Level 55</td><td>650,000 PTS</td></tr>
+                <tr><td>Level 56</td><td>670,000 PTS</td></tr>
+                <tr><td>Level 57</td><td>690,000 PTS</td></tr>
+                <tr><td>Level 58</td><td>710,000 PTS</td></tr>
+                <tr><td>Level 59</td><td>730,000 PTS</td></tr>
+                <tr><td>Level 60</td><td>750,000 PTS</td></tr>
+                <tr><td>Level 61</td><td>770,000 PTS</td></tr>
+                <tr><td>Level 62</td><td>790,000 PTS</td></tr>
+                <tr><td>Level 63</td><td>810,000 PTS</td></tr>
+                <tr><td>Level 64</td><td>830,000 PTS</td></tr>
+                <tr><td>Level 65</td><td>850,000 PTS</td></tr>
+                <tr><td>Level 66</td><td>870,000 PTS</td></tr>
+                <tr><td>Level 67</td><td>890,000 PTS</td></tr>
+                <tr><td>Level 68</td><td>910,000 PTS</td></tr>
+                <tr><td>Level 69</td><td>930,000 PTS</td></tr>
+                <tr><td>Level 70</td><td>950,000 PTS</td></tr>
+                <tr><td>Level 71</td><td>970,000 PTS</td></tr>
+                <tr><td>Level 72</td><td>990,000 PTS</td></tr>
+                <tr><td>Level 73</td><td>1,010,000 PTS</td></tr>
+                <tr><td>Level 74</td><td>1,030,000 PTS</td></tr>
+                <tr><td>Level 75</td><td>1,050,000 PTS</td></tr>
+                <tr><td>Level 76</td><td>1,070,000 PTS</td></tr>
+                <tr><td>Level 77</td><td>1,090,000 PTS</td></tr>
+                <tr><td>Level 78</td><td>1,110,000 PTS</td></tr>
+                <tr><td>Level 79</td><td>1,130,000 PTS</td></tr>
+                <tr><td>Level 80</td><td>1,150,000 PTS</td></tr>
+                <tr><td>Level 81</td><td>1,170,000 PTS</td></tr>
+                <tr><td>Level 82</td><td>1,190,000 PTS</td></tr>
+                <tr><td>Level 83</td><td>1,210,000 PTS</td></tr>
+                <tr><td>Level 84</td><td>1,230,000 PTS</td></tr>
+                <tr><td>Level 85</td><td>1,250,000 PTS</td></tr>
+                <tr><td>Level 86</td><td>1,270,000 PTS</td></tr>
+                <tr><td>Level 87</td><td>1,290,000 PTS</td></tr>
+                <tr><td>Level 88</td><td>1,310,000 PTS</td></tr>
+                <tr><td>Level 89</td><td>1,330,000 PTS</td></tr>
+                <tr><td>Level 90</td><td>1,350,000 PTS</td></tr>
+                <tr><td>Level 91</td><td>1,370,000 PTS</td></tr>
+                <tr><td>Level 92</td><td>1,390,000 PTS</td></tr>
+                <tr><td>Level 93</td><td>1,410,000 PTS</td></tr>
+                <tr><td>Level 94</td><td>1,430,000 PTS</td></tr>
+                <tr><td>Level 95</td><td>1,450,000 PTS</td></tr>
+                <tr><td>Level 96</td><td>1,470,000 PTS</td></tr>
+                <tr><td>Level 97</td><td>1,490,000 PTS</td></tr>
+                <tr><td>Level 98</td><td>1,510,000 PTS</td></tr>
+                <tr><td>Level 99</td><td>1,530,000 PTS</td></tr>
+                <tr><td>Level 100</td><td>1,550,000 PTS</td></tr>
+                ...
+                
+                </tbody>
+                
+    </table>
+</div>
+
+
+           <!-- Hierarquia -->
+<div id="hierarquia">
+    <h2>Hierarquia</h2>
+    <p>
+        O mundo de "Burned Fate" é dividido em reinos, guildas e facções, cada uma com sua própria hierarquia. A ascensão dentro de uma organização depende das ações do jogador, como conquistas, alianças, feitos de coragem e habilidades de liderança. Subir na hierarquia não só traz maior influência, mas também concede acesso a novos recursos, poder e oportunidades.
+    </p>
+
+    <h3>Hierarquia Social</h3>
+    <p>
+        A sociedade é estruturada em diferentes camadas sociais, que determinam o status e as responsabilidades de cada pessoa. Aqui estão as principais posições na hierarquia, do mais baixo ao mais alto:
+    </p>
+
+    <ul>
+        <li><strong>Plebeu:</strong> O nível mais baixo da hierarquia, composto por cidadãos comuns. Plebeus têm pouca influência e acesso limitado a recursos. Eles vivem uma vida simples, com poucas oportunidades de ascensão.</li>
+        <li><strong>Soldado:</strong> Os soldados são aqueles que defendem o reino ou facção. Embora mais respeitados do que os plebeus, sua posição ainda é subordinada. Eles podem ascender através de bravura em batalha e serviços prestados.</li>
+        <li><strong>Aspirante:</strong> Um membro em treinamento para posições mais altas. Aspirantes são aqueles que demonstraram potencial, mas ainda não alcançaram a confiança plena das lideranças.</li>
+        <li><strong>Cavaleiro:</strong> Os cavaleiros são guerreiros honrados que têm o dever de proteger as terras e defender os interesses de sua facção ou reino. São altamente respeitados e podem ter terras ou influência, dependendo de sua lealdade e habilidades.</li>
+        <li><strong>Comandante:</strong> Líderes militares que supervisionam grandes grupos de soldados ou cavaleiros. Comandantes têm poder sobre várias tropas e recursos, sendo vitais nas decisões estratégicas do reino ou facção.</li>
+        <li><strong>Barão:</strong> Um nobre que governa uma pequena região ou cidade. Barões têm certa autonomia e recursos, mas ainda são subordinados a figuras de maior autoridade, como duques ou reis.</li>
+        <li><strong>Duque/Dama:</strong> Nobres de alto escalão que governam vastas regiões ou províncias. Duques e Damas têm influência significativa e são responsáveis por grandes exércitos e territórios. Eles são aliados poderosos ou inimigos temíveis.</li>
+        <li><strong>Visconde:</strong> Um título dado a indivíduos que têm controle sobre múltiplos feudos ou cidades importantes. Viscondes exercem grande poder político e econômico, com influência sobre várias áreas.</li>
+        <li><strong>Conde:</strong> Com um status nobre elevado, o Conde ou Condessa é uma figura chave nos conselhos do reino ou facção. Eles têm autoridade sobre diversos territórios e são influentes nas decisões políticas de maior escala.</li>
+        <li><strong>Rei/Rainha:</strong> O monarca que governa o reino ou a facção com total autoridade. Rei e Rainha são os líderes supremos, com poder absoluto sobre as leis, as forças armadas e os recursos do reino. Sua posição é marcada por grande respeito, mas também por grande responsabilidade.</li>
+    </ul>
+
+    <h3>Como Subir na Hierarquia</h3>
+    <p>
+        Para subir na hierarquia, os jogadores devem demonstrar habilidade, liderança e coragem. Conquistar grandes vitórias, formar alianças estratégicas e concluir missões de alto risco são formas de ganhar respeito e recursos. Além disso, as ações de cada personagem dentro de seu grupo ou facção podem determinar sua ascensão: se eles agirem com sabedoria, podem conquistar a confiança de figuras importantes e alcançar posições mais altas.
+    </p>
+
+    <h3>Consequências da Hierarquia</h3>
+    <p>
+        A posição na hierarquia não é apenas uma questão de poder—ela também determina o acesso a recursos, terras e aliados. Um plebeu tem pouco poder, mas um rei ou rainha pode controlar vastos exércitos e territórios. No entanto, as figuras de alto escalão também enfrentam responsabilidades imensas e podem ser desafiadas por outros que buscam o poder. A política e as intrigas internas podem ser tão perigosas quanto os inimigos fora dos muros do reino.
+    </p>
+
+    <h3>Conclusão</h3>
+    <p>
+        A ascensão na hierarquia é uma jornada desafiadora, onde não basta ser forte ou corajoso. Os jogadores precisam de sabedoria, aliados e uma boa estratégia para se tornarem líderes em um mundo de grandes ambições e perigos. Cada posição na hierarquia oferece oportunidades e desafios únicos, e cabe a você decidir como usar o seu poder para conquistar o que deseja.
+    </p>
+</div>
+
+
+
+
+
+
+
+
+            <!-- Missão Principal -->
+            <div id="missao">
+                <h2>Missão Principal</h2>
+                <p>
+                    A missão principal é o foco da campanha, envolvendo a busca pela Essência do Eclipse e o confronto com o Soberano. Os jogadores devem trabalhar juntos para alcançar esse objetivo épico.
+                </p>
+            </div>
+
+
+
+
+
+
+
+<!-- História Secundária -->
+<div id="historia-secundaria">
+    <h2>História Secundária</h2>
+    <p>
+        Além da missão principal, os jogadores podem explorar histórias secundárias, que aprofundam o mundo do jogo e oferecem novas experiências. Essas missões podem incluir conflitos políticos, mistérios antigos, desafios pessoais dos personagens e até pequenas tarefas que ajudam a moldar o destino do mundo. Existem diversas maneiras de descobrir e se envolver com missões secundárias, algumas delas são:
+    </p>
+
+    <h3>Formas de Ativar Missões Secundárias</h3>
+    <ul>
+        <li><strong>Exploração:</strong> Durante a exploração do mundo, os jogadores podem encontrar pistas ou locais que indicam a existência de uma missão secundária. Isso pode incluir uma caverna abandonada, um campo de batalha antigo ou uma cidade deserta com um segredo guardado. Esses locais escondem desafios que podem ser enfrentados para obter recompensas valiosas.</li>
+
+        <li><strong>Side Quests:</strong> São missões que aparecem enquanto o jogador avança pela história, oferecendo tarefas paralelas, como ajudar um NPC, caçar uma criatura rara ou resolver um enigma. Estas missões geralmente têm um impacto direto no progresso do personagem, oferecendo itens ou informações extras.</li>
+
+        <li><strong>Conversando com NPCs:</strong> Interagir com NPCs pode abrir novas missões. Às vezes, basta perguntar a um personagem se ele precisa de ajuda para descobrir uma missão secundária. NPCs podem oferecer dicas sobre problemas locais, criaturas que precisam ser derrotadas ou itens perdidos que podem ser recuperados.</li>
+
+        <li><strong>Eventos Aleatórios:</strong> O mundo está cheio de eventos inesperados. Um aldeão pode pedir ajuda para encontrar um familiar desaparecido, um comerciante pode ser roubado por bandidos ou um monstro pode aparecer causando destruição. Esses eventos geralmente acontecem de forma dinâmica e podem ser abordados de diferentes maneiras.</li>
+
+        <li><strong>Diários e Cartas:</strong> Nos mais diversos cantos do mundo, os jogadores podem encontrar diários, cartas ou outros documentos que revelam histórias de outros personagens e introduzem novas missões. Esses itens podem ser encontrados em locais secretos ou como parte do loot de inimigos.</li>
+
+        <li><strong>Interações com o Ambiente:</strong> Em certos lugares, o jogador pode ser capaz de interagir com o ambiente, como investigar uma misteriosa porta trancada ou usar habilidades especiais para acessar áreas proibidas. Isso pode levar a novas aventuras e descobertas de missões secundárias.</li>
+
+        <li><strong>Provas e Desafios:</strong> Em alguns pontos do jogo, os jogadores podem encontrar desafios de combate ou testes de habilidade organizados por facções ou reinos. Participar desses desafios pode abrir novas histórias, recompensas e aliados.</li>
+
+        <li><strong>Rumores e Histórias Locais:</strong> Conversas com NPCs em tavernas ou mercados podem revelar rumores sobre eventos secretos ou mistérios não resolvidos. Seguir essas pistas pode resultar em missões secundárias envolventes, como descobrir o paradeiro de uma pessoa importante ou investigar a origem de uma ameaça misteriosa.</li>
+
+        <li><strong>Decisões e Escolhas:</strong> Em algumas situações, o jogador pode tomar decisões que influenciam diretamente o desenvolvimento de missões secundárias. Ao ajudar ou ignorar certos NPCs, o jogador pode abrir diferentes caminhos, gerando novas histórias e possibilidades de ação.</li>
+
+        <li><strong>Missões de Fação ou Guilda:</strong> Ao se juntar a facções ou guildas, os jogadores podem receber missões específicas que têm grande impacto dentro dessa organização. Essas missões podem incluir desde espionagem até ataques coordenados contra rivais, oferecendo uma experiência única dependendo da facção escolhida.</li>
+    </ul>
+
+    <h3>Benefícios das Missões Secundárias</h3>
+    <p>
+        As missões secundárias são fundamentais para enriquecer a experiência de jogo, oferecendo mais do que apenas o avanço na trama principal. Elas permitem ao jogador:
+    </p>
+    <ul>
+        <li><strong>Explorar o Mundo:</strong> Ao aceitar missões secundárias, o jogador tem a oportunidade de explorar novos locais e aprender mais sobre o universo do jogo, criando uma sensação de imersão profunda.</li>
+        <li><strong>Desenvolver Personagens:</strong> Essas missões podem ajudar a desenvolver a história pessoal de cada personagem, revelando segredos e passando por experiências que moldam seu destino.</li>
+        <li><strong>Obter Recompensas Exclusivas:</strong> Missões secundárias frequentemente oferecem itens, habilidades ou artefatos raros que podem ser usados na missão principal ou para melhorar a jogabilidade.</li>
+        <li><strong>Aumentar a Imersão:</strong> Ao se envolver em histórias secundárias, os jogadores podem mergulhar mais fundo nas narrativas do jogo, criando conexões emocionais com o mundo e seus habitantes.</li>
+    </ul>
+
+    <h3>Conclusão</h3>
+    <p>
+        As missões secundárias são uma parte essencial do jogo, permitindo que os jogadores se aprofundem na história e no mundo ao seu redor. Com diversas formas de descobri-las e completá-las, as possibilidades são quase infinitas, tornando o jogo ainda mais rico e envolvente. Ao se envolver em missões secundárias, os jogadores não só ganham recompensas valiosas, mas também enriquecem a própria narrativa, moldando o futuro do seu personagem e do mundo.
+    </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- História Própria -->
+<div id="historia-propria">
+    <h2>História Própria</h2>
+    <p>
+        Cada personagem no jogo possui uma história única, com motivações, objetivos e passagens de vida que refletem sua jornada pessoal. Essas histórias podem se entrelaçar com a trama principal, oferecendo uma experiência rica e personalizada para cada jogador. Para avançar em sua história, o jogador deve buscar ativamente seu próprio caminho, enfrentando desafios e tomando decisões que moldam seu destino. Ao seguir o enredo pessoal, o jogador pode se deparar com conflitos, aliados, inimigos e até mesmo a morte, criando um ciclo de eventos que pode alterar profundamente o rumo da sua jornada.
+    </p>
+
+    <h3>Como Desenvolver Sua História</h3>
+    <p>
+        A jornada de cada personagem é única, e o jogador pode escolher como desenvolver sua história de diversas formas. Abaixo estão algumas das maneiras pelas quais o jogador pode explorar e avançar em sua trajetória pessoal:
+    </p>
+    <ul>
+        <li><strong>Explorando o Passado:</strong> Durante a exploração do mundo, o jogador pode descobrir mais sobre o passado de seu personagem. Isso pode incluir locais significativos da infância, pessoas do passado ou eventos que marcaram a vida do herói. Buscar essas memórias pode desbloquear novas habilidades, alianças ou objetivos.</li>
+
+        <li><strong>Conflitos Pessoais:</strong> O personagem pode se deparar com conflitos internos ou externos que precisam ser resolvidos para seguir em frente. Isso pode envolver confrontos com figuras do passado, dilemas morais, ou escolhas difíceis que afetam diretamente sua visão do mundo e suas ações.</li>
+
+        <li><strong>Aliados e Inimigos:</strong> Ao longo da jornada, o jogador terá a oportunidade de fazer alianças com outros personagens ou até mesmo inimigos que surgem devido a escolhas feitas no passado. Esses aliados podem ajudar na evolução da história do personagem, enquanto inimigos podem tentar impedi-lo de alcançar seus objetivos.</li>
+
+        <li><strong>Missões Pessoais:</strong> O jogador pode ser solicitado a cumprir missões relacionadas diretamente à sua história. Isso pode envolver busca por vingança, redenção ou a busca por algo perdido no passado. Essas missões oferecem recompensas únicas e ajudam o jogador a entender melhor o passado e as motivações do personagem.</li>
+
+        <li><strong>Enfrentando o Destino:</strong> O jogador pode ser confrontado com desafios que estão diretamente ligados ao destino de seu personagem, como cumprir um juramento antigo ou quebrar uma maldição que persegue sua linhagem. Essas situações podem levar a eventos épicos, com consequências tanto para o personagem quanto para o mundo ao seu redor.</li>
+
+        <li><strong>Tomando Decisões Cruciais:</strong> Em vários pontos da história do personagem, o jogador terá que tomar decisões difíceis que podem afetar o futuro. Essas escolhas podem alterar o curso da vida do personagem, levando a diferentes desfechos, incluindo vitórias, tragédias ou até a morte. Cada decisão conta, e ela pode reverberar por toda a narrativa do jogo.</li>
+
+        <li><strong>A Morte e as Consequências:</strong> A morte é uma possibilidade real no caminho do personagem. Ela pode ocorrer por escolhas ruins, batalhas difíceis ou até mesmo sacrifícios necessários para alcançar um objetivo maior. A morte do personagem pode ser definitiva ou ter implicações importantes para o enredo, levando a novas missões de vingança, luto ou até ressurreição, dependendo do contexto.</li>
+    </ul>
+
+    <h3>Impacto da História Própria no Jogo</h3>
+    <p>
+        A história própria do personagem tem um grande impacto nas suas interações com o mundo e outros personagens. Algumas das formas que essa jornada pessoal afeta o jogo incluem:
+    </p>
+    <ul>
+        <li><strong>Desenvolvimento de Habilidades:</strong> Conquistar marcos na história do personagem pode desbloquear novas habilidades, poderes ou equipamentos. O crescimento pessoal está ligado diretamente às escolhas e acontecimentos do passado do personagem.</li>
+
+        <li><strong>Relacionamentos com NPCs:</strong> As ações e decisões do jogador podem criar laços de amizade, confiança ou até ódio com NPCs ao longo do jogo. Esses relacionamentos influenciam missões secundárias, alianças e o desenvolvimento da história principal.</li>
+
+        <li><strong>Mudança no Mundo:</strong> A história do personagem pode ter efeitos reais no mundo ao seu redor. A derrota de um inimigo pessoal, por exemplo, pode levar à queda de uma facção, ao fortalecimento de uma aliança ou até mesmo a mudanças em regiões específicas do jogo.</li>
+
+        <li><strong>Reputação e Legado:</strong> As escolhas e ações ao longo da jornada podem afetar a reputação do personagem entre diferentes facções e regiões. Isso pode levar a novas oportunidades ou dificuldades, dependendo de como o jogador é visto no mundo.</li>
+    </ul>
+
+    <h3>Conclusão</h3>
+    <p>
+        A história própria de cada personagem é uma parte fundamental do jogo, oferecendo uma experiência rica e personalizada. O jogador não apenas segue a trama principal, mas também constrói sua própria narrativa, enfrentando desafios, fazendo aliados e inimigos, e moldando seu destino. Com escolhas significativas e consequências reais, a jornada pessoal do personagem oferece profundidade ao jogo, tornando-o uma experiência única e imersiva.
+    </p>
+</div>
+
+
+
+
+<!-- Conquistas -->
+<div id="conquista">
+    <h2>Conquistas</h2>
+    <p>
+        Ao longo de sua jornada, os jogadores podem alcançar marcos importantes e ganhar recompensas que ajudam no desenvolvimento de seu personagem. Aqui estão algumas das conquistas disponíveis:
+    </p>
+
+    <ul>
+        <li><strong>Primeiro Passo:</strong> Upe seu primeiro nível.<br>
+            <em>Recompensa:</em> Uma arma gratis no ferreiro de Solmaria.</li> 
+        
+        <li><strong>Explorador Iniciante:</strong> Visite 5 áreas diferentes no mundo.<br>
+            <em>Recompensa:</em> Mapa detalhado de uma região desconhecida.</li>
+        
+        <li><strong>Força de Vontade:</strong> Complete sua primeira missão solo.<br>
+            <em>Recompensa:</em> Uma habilidade adicional temporária para o combate.</li>
+
+        <li><strong>Primeira Vitória:</strong> Derrote seu primeiro inimigo de nível superior.<br>
+            <em>Recompensa:</em> Uma melhoria de resistência temporária para as próximas batalhas.</li>
+
+        <li><strong>Amigo das Feras:</strong> Domesticou um animal ou monstro.<br>
+            <em>Recompensa:</em> Um item de cura simples para viagens.</li>
+
+        <li><strong>Curioso:</strong> Encontre uma relíquia antiga.<br>
+            <em>Recompensa:</em> Acesso a um diário com dicas sobre a história do mundo.</li>
+
+        <li><strong>Em Busca de Sabedoria:</strong> Complete uma missão de aprendizado com um mentor.<br>
+            <em>Recompensa:</em> Um aumento temporário na experiência ganhada.</li>
+
+        <li><strong>Primeiro Aliado:</strong> Convide um NPC para ser seu aliado.<br>
+            <em>Recompensa:</em> Bônus de moral para o time em combate.</li>
+
+        <li><strong>Desbravador de Dungeons:</strong> Explore uma masmorra completa.<br>
+            <em>Recompensa:</em> Um baú com recursos úteis.</li>
+
+        <li><strong>Herói Local:</strong> Ajude uma aldeia ou cidade com seus problemas.<br>
+            <em>Recompensa:</em> Boas relações com a cidade e descontos em comerciantes locais.</li>
+
+        <li><strong>Assinante do Destino:</strong> Complete uma missão épica.<br>
+            <em>Recompensa:</em> Um título que aumenta a reputação com outras facções.</li>
+
+        <li><strong>Resgatador:</strong> Salve um NPC importante.<br>
+            <em>Recompensa:</em> Um Tciket "Salva Morte".</li>
+
+        <li><strong>Estratégia e Tática:</strong> Vença uma batalha difícil usando uma estratégia criativa.<br>
+            <em>Recompensa:</em>Acesso a dialogos exclusivos com Reis.</li>
+
+        <li><strong>Conquistador de Reinos:</strong> Complete uma missão relacionada a uma facção.<br>
+            <em>Recompensa:</em> Acesso a novos recursos e áreas exclusivas.</li>
+
+        <li><strong>Guardião da Paz:</strong> Resolva um conflito sem recorrer à violência.<br>
+            <em>Recompensa:</em> Aumento na diplomacia e novas opções de interação com NPCs.</li>
+
+        <li><strong>Caçador de Tesouros:</strong> Encontre um tesouro escondido.<br>
+            <em>Recompensa:</em> Recurso raro ou item exclusivo para aprimorar equipamentos.</li>
+
+        <li><strong>Vingador:</strong> Derrote o inimigo responsável por uma tragédia pessoal.<br>
+            <em>Recompensa:</em> Uma melhoria nos atributos de combate durante uma hora.</li>
+
+        <li><strong>Espírito de Equipe:</strong> Complete uma missão cooperativa com outros jogadores.<br>
+            <em>Recompensa:</em> Aumento temporário da eficiência do grupo + Dobro de EXP para todos os membros do grupo.</li>
+
+        <li><strong>Comerciante Hábil:</strong> Faça 10 trocas comerciais com sucesso.<br>
+            <em>Recompensa:</em> Descontos em várias lojas do jogo.</li>
+
+        <li><strong>Viajante do Mundo:</strong> Visite todas as grandes cidades do jogo.<br>
+            <em>Recompensa:</em> Acesso a um ponto de viagem rápida para qualquer cidade.</li>
+    </ul>
+
+    <br> <br> <br>
+
+    <h3> Mais Conquistas em Breve...</h3>
+</div>
+
+
+   
+<div id="Treino" class="conteudo hidden">
+    <h2 class="text-2xl font-bold mb-4">Treinamentos</h2>
+    <p class="mb-6">
+        O treinamento é uma parte essencial para o desenvolvimento do seu personagem. Ele pode ser feito de diferentes formas, dependendo da sua necessidade e da sua disponibilidade de parceiros de treino. Aqui estão os tipos de treinamento disponíveis:
+    </p>
+
+    <h3 class="text-xl font-semibold text-blue-400">Treinamento Solo</h3>
+    <p>
+        O treinamento solo é uma forma prática de aprimorar suas habilidades individuais. Você pode treinar sozinho, focando em atributos específicos como força, agilidade, inteligência, ou aprimorando habilidades de combate. Este tipo de treino é ideal para quem deseja evoluir no seu próprio ritmo.
+    </p>
+    <p><em>Recompensa:</em> EXP acumulado no treino de habilidades escolhidas.</p>
+
+    <h3 class="text-xl font-semibold text-blue-400 mt-4">Treinamento em Dupla</h3>
+    <p>
+        O treinamento em dupla permite que você se junte a outro jogador para melhorar suas habilidades em conjunto. Isso pode incluir treinos de combate em equipe, estratégias em conjunto, e outras habilidades sociais e táticas. Trabalhar em dupla é uma excelente forma de evoluir rapidamente, além de fortalecer laços com outros jogadores.
+    </p>
+    <p><em>Recompensa:</em> EXP de ambos os jogadores, bônus de eficiência ao trabalhar em equipe (o dobro de EXP).</p>
+
+    <h3 class="text-xl font-semibold text-blue-400 mt-4">Encontrando um Mestre</h3>
+    <p>
+        Em sua jornada, você pode encontrar um mestre que será responsável por guiar e aprimorar suas habilidades. Ao se treinar com um mestre, você terá a chance de aprender técnicas avançadas e ganhar EXP rapidamente. O mestre pode ensinar habilidades específicas e fornecer orientações valiosas para seu desenvolvimento no jogo.
+    </p>
+    <p><em>Recompensa:</em> Técnicas avançadas, EXP elevado, e possíveis itens especiais.</p>
+
+    <h3 class="text-xl font-semibold text-blue-400 mt-4">Avaliação de Treinamento</h3>
+    <p>
+        Após completar um treinamento, um Administrador será responsável por avaliar o seu progresso e entregar a quantidade de EXP correspondente ao seu desempenho. Essa avaliação será feita de maneira justa, considerando seu nível de habilidade e o tempo dedicado ao treino.
+    </p>
+</div>
+
+
+
+
+
+
+          <!-- Combate -->
+<div id="combate">
+    <h2>Combate</h2>
+    <p>
+        O sistema de combate é baseado em turnos, com foco em estratégia e trabalho em equipe. Cada personagem tem habilidades únicas que podem ser usadas para derrotar inimigos. Em uma batalha, não basta ter o maior atributo—o verdadeiro vencedor será quem souber usar sua mente e seus recursos de forma mais eficiente.
+    </p>
+
+    <h3>Como Funciona o Combate?</h3>
+    <p>
+        Durante cada turno, os personagens têm a oportunidade de executar ações estratégicas, como atacar, defender, usar habilidades especiais ou itens. A vitória não depende apenas de ter o maior atributo, mas de como você planeja suas ações e antecipa os movimentos do adversário.
+    </p>
+
+    <h3>Atributos e Vitória</h3>
+    <p>
+        Em alguns casos, atributos mais altos podem oferecer vantagens diretas. Por exemplo:
+    </p>
+    <ul>
+        <li><strong>Força &gt; Resistência:</strong> Se a Força de um personagem for maior que a Resistência do inimigo, o dano será mais eficaz.</li>
+        <li><strong>Agilidade &gt; Força:</strong> Personagens com maior Agilidade podem se esquivar de ataques mais pesados, evitando danos e se movendo com mais rapidez.</li>
+        <li><strong>Determinação &gt; Agilidade:</strong> A Determinação permite resistir a ataques mentais ou estratégias de manipulação, dando ao personagem a chance de continuar lutando mesmo quando a Agilidade falha.</li>
+        <li><strong>Distância &gt; Força:</strong> Se um personagem tem um atributo de Distância superior à Força de um inimigo, ele poderá atacar a partir de longe e evitar um combate corpo a corpo.</li>
+    </ul>
+    <p>
+        No entanto, as lutas não são decididas apenas pelos números. Muitas vezes, a estratégia, o uso inteligente de habilidades e o trabalho em equipe serão os fatores determinantes para o sucesso. Força não é tudo—em um combate, ser imprevisível, antecipar os movimentos do adversário e saber quando atacar ou se defender é a chave para a vitória.
+    </p>
+
+    <h3>Turnos e Estratégia</h3>
+    <p>
+        Cada combate é dividido em turnos, onde cada personagem realiza uma ação, seja atacando, defendendo ou usando habilidades especiais. A ordem dos turnos é baseada em Agilidade, mas a estratégia do jogador pode ser mais importante do que a velocidade pura. Anticipar o movimento do inimigo e usar habilidades no momento certo pode reverter uma luta, mesmo quando o oponente parece ter uma vantagem.
+    </p>
+
+    <h3>Conclusão</h3>
+    <p>
+        O vencedor de uma batalha será aquele que souber usar não apenas seus atributos, mas também sua inteligência e visão estratégica. A chave para o sucesso está em não subestimar seus adversários e aprender a dominar o campo de batalha com sabedoria e coragem.
+    </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Atributos -->
+<div id="atributos">
+    <h2>Atributos</h2>
+    <p>
+        Os atributos definem as habilidades básicas do personagem, como força, resistência, agilidade, destreza, determinação e energia. Eles influenciam diretamente as ações e decisões do personagem em diversas situações. Confira o que cada um deles faz:
+    </p>
+
+    <h3>Força</h3>
+    <p>
+        A Força determina o poder físico do personagem, influenciando sua capacidade de causar dano em ataques corpo a corpo, levantar objetos pesados e resistir a ataques físicos. Quanto maior a força, maior o impacto no combate e nas atividades que exigem esforço físico.
+    </p>
+
+    <h3>Resistência</h3>
+    <p>
+        A Resistência é o atributo que mede a capacidade do personagem de suportar danos e efeitos negativos, como envenenamento, fadiga e condições adversas. Quanto maior a resistência, mais difícil será derrubar o personagem em batalhas prolongadas e situações extremas.
+    </p>
+
+    <h3>Agilidade</h3>
+    <p>
+        A Agilidade influencia a velocidade e a capacidade de movimentação do personagem. Ela afeta a rapidez com que o personagem pode atacar, esquivar de golpes e executar manobras evasivas. Um personagem ágil pode se mover mais rápido em campo de batalha e evitar ataques com mais eficiência.
+    </p>
+
+    <h3>Destreza</h3>
+    <p>
+        A Destreza está ligada à precisão e habilidade em ações detalhadas, como disparar flechas, lançar magias e realizar manobras complicadas. Ela também afeta a capacidade de execução de habilidades em combate que exigem foco e controle de movimento, como desarmes ou golpes rápidos.
+    </p>
+
+    <h3>Determinação</h3>
+    <p>
+        A Determinação reflete a força mental e a capacidade de resistir ao desespero ou ao medo. Esse atributo é essencial para resistir a manipulações psicológicas, tomar decisões rápidas sob pressão e manter o foco em momentos de adversidade. Um personagem com alta determinação é mais resiliente a efeitos como medo ou confusão.
+    </p>
+
+    <h3>Energia</h3>
+    <p>
+        A Energia define a força, potência e alcance dos poderes do personagem. Esse atributo é essencial para aqueles que utilizam habilidades mágicas, ataques energéticos e manipulações de força sobrenatural. Quanto maior a energia, mais devastadores e amplos serão seus ataques e habilidades especiais.
+    </p> 
+</div>
+
+
+<div id="nivelamento" class="conteudo hidden">
+    <h2 class="text-2xl font-bold mb-4">Sistema de Nivelamento</h2>
+    <p>O sistema de nivelamento permite que seus atributos evoluam de maneira única, desbloqueando habilidades poderosas à medida que você conquista mais pontos. Aqui estão os marcos para cada atributo:</p>
+
+    <!-- Força -->
+    <h3 class="text-xl font-semibold text-blue-400 mt-6">Força</h3>
+    <ul>
+        <li><strong>5k pontos:</strong> Conseguir quebrar uma pedra com as mãos nuas.</li>
+        <li><strong>10k pontos:</strong> Levantar uma caixa de 100kg com facilidade.</li>
+        <li><strong>50k pontos:</strong> Realizar um soco capaz de quebrar paredes finas.</li>
+        <li><strong>100k pontos:</strong> Levantar grandes rochas ou árvores pequenas.</li>
+        <li><strong>500k pontos:</strong> Realizar ataques de grande impacto em combate.</li>
+        <li><strong>1M pontos:</strong> Levantar um veículo ou derrubar um prédio em combate.</li>
+    </ul>
+
+    <!-- Velocidade -->
+    <h3 class="text-xl font-semibold text-blue-400 mt-6">Velocidade</h3>
+    <ul>
+        <li><strong>5k pontos:</strong> Correr a 10 km/h.</li>
+        <li><strong>10k pontos:</strong> Correr a 15 km/h.</li>
+        <li><strong>50k pontos:</strong> Correr a 30 km/h.</li>
+        <li><strong>100k pontos:</strong> Correr a 50 km/h.</li>
+        <li><strong>500k pontos:</strong> Correr a 80 km/h.</li>
+        <li><strong>1M pontos:</strong> Correr a 120 km/h ou mais.</li>
+    </ul>
+
+    <!-- Determinação -->
+<h3 class="text-xl font-semibold text-red-400 mt-6">Determinação</h3>
+<ul>
+    <li><strong>5k pontos:</strong> Sua resistência mental aumenta. Você pode suportar pequenas dores e distrações sem perder o foco.</li>
+    <li><strong>10k pontos:</strong> Sua força de vontade se fortalece. Agora é mais difícil ser influenciado por intimidação ou medo.</li>
+    <li><strong>50k pontos:</strong> Seu espírito se torna inabalável. Manipulações mentais simples não afetam mais você.</li>
+    <li><strong>100k pontos:</strong> Sua mente se adapta rapidamente ao caos. Você pode manter a calma e reagir racionalmente em qualquer situação.</li>
+    <li><strong>500k pontos:</strong> Sua determinação transcende o comum. Mesmo sob dor intensa ou pressão extrema, sua força de vontade não vacila.</li>
+    <li><strong>1M pontos:</strong> Sua mente é indomável. Nenhum efeito psicológico pode lhe deter, e sua presença inspira aqueles ao seu redor.</li>
+</ul>
+
+
+    <!-- Destreza -->
+    <h3 class="text-xl font-semibold text-blue-400 mt-6">Destreza</h3>
+    <ul>
+        <li><strong>5k pontos:</strong> Atacar com velocidade básica de espada.</li>
+        <li><strong>10k pontos:</strong> Atacar com uma precisão maior, evitando defesas inimigas.</li>
+        <li><strong>50k pontos:</strong> Atacar com múltiplos golpes rápidos em um segundo.</li>
+        <li><strong>100k pontos:</strong> Conseguir realizar ataques críticos com mais frequência.</li>
+        <li><strong>500k pontos:</strong> Realizar ataques que podem atravessar armaduras leves.</li>
+        <li><strong>1M pontos:</strong> Realizar ataques extremamente rápidos, impossíveis de evitar com defesas normais.</li>
+    </ul>
+
+    <!-- Resistência -->
+    <h3 class="text-xl font-semibold text-blue-400 mt-6">Resistência</h3>
+    <ul>
+        <li><strong>5k pontos:</strong> Resistir a lesões pequenas e dores leves.</li>
+        <li><strong>10k pontos:</strong> Resistir a quedas pequenas e queimaduras leves.</li>
+        <li><strong>50k pontos:</strong> Resistir a ferimentos mais graves e envenenamentos leves.</li>
+        <li><strong>100k pontos:</strong> Resistir a danos físicos em combate e recuperar-se rapidamente de ferimentos.</li>
+        <li><strong>500k pontos:</strong> Resistir a condições extremas, como temperaturas muito altas ou baixas.</li>
+        <li><strong>1M pontos:</strong> Regeneração quase instantânea de ferimentos e resistência a danos massivos, como explosões.</li>
+    </ul>
+
+      <!-- Energia -->
+      <h3 class="text-xl font-semibold text-blue-400 mt-6">Energia</h3>
+      <ul>
+          <li><strong>5k pontos:</strong> Desnloqueia a capacidade de usar energia.</li>
+          <li><strong>10k pontos:</strong> A manipulação da sua energia melhora. Agora você pode destruir uma pedra grande. Atinge um alcance de 20 metros.</li>
+          <li><strong>50k pontos:</strong> Seu controle energético se expande. Você pode criar explosões de médio alcance com maior impacto de uma vila média. Também o alcance aumenta para 50 metros.</li>
+          <li><strong>100k pontos:</strong> As habilidades energéticas tornam-se mais duradouras, transformações ou movimentos anteriormentes desgastantes começam a ficar mais simples. Agora você amplia a área de efeito e controla melhor os ataques. O alcance atinge 100 metros.</li>
+          <li><strong>500k pontos:</strong> Seu poder destrutivo atinge outro nível. Você pode lançar ataques de energia massivos, cobrindo uma grande região. E também desbloqueia um novo pedido de poder.</li>
+          <li><strong>1M pontos:</strong> O domínio da energia é absoluto. Agora você pode manipular energia em larga escala, devastando campos inteiros com suas técnicas.</li>
+      </ul>
+  </div>
+  
+  <div id="energia">
+    <h2>Sistema de Energias</h2>
+    <p>
+        No mundo de "Burned Fate", as energias são a essência do poder que flui através de todos os seres vivos e do próprio universo. Cada personagem possui uma conexão única com um tipo de energia, que define suas habilidades, poderes e estilo de jogo. Escolher sua energia é uma decisão crucial, pois ela moldará sua jornada de forma permanente.
+    </p>
+    <br>
+    <h3>Tipos de Energia</h3>
+    <br><br>
+    <h4>Energia Vital</h4>
+    <p>
+        A Energia Vital é a força fundamental da vida, permitindo que seus usuários fortaleçam seus corpos, curem feridas e resistam a ataques físicos. Aqueles que dominam essa energia possuem uma conexão profunda com o ciclo da vida e da morte.
+    </p>
+    <strong>Afinidade:</strong> Indicada para guerreiros, curandeiros e paladinos que buscam resistência e suporte em combate. <br>
+    <strong>Como obter:</strong> Através de intenso treinamento físico, práticas espirituais ou herança sanguínea. <br>
+    <strong>Medida por:</strong> Energia + Força.
+    <br><br>
+    <h4>Mana</h4>
+    <p>
+        Mana é a energia mágica que permeia o mundo, sendo utilizada para conjurar feitiços, manipular os elementos e distorcer a realidade. Magos e feiticeiros dependem dessa energia para realizar seus poderes arcanos.
+    </p>
+    <strong>Afinidade:</strong> Indicada para magos e feiticeiros que desejam controle mágico e ataque à distância. <br>
+    <strong>Como obter:</strong> Estudando grimórios, treinando em academias mágicas ou absorvendo energia de locais místicos. <br>
+    <strong>Medida por:</strong> Energia + Destreza.
+    <br><br>
+    <h4>Reiryoku</h4>
+    <p>
+        Reiryoku é a energia espiritual, derivada da conexão com o mundo dos espíritos. Permite a manipulação de almas, invocação de entidades e criação de barreiras espirituais. É a chave para aqueles que transcendem a existência física.
+    </p>
+    <strong>Afinidade:</strong> Ideal para xamãs, ceifadores e necromantes que lidam com o mundo espiritual. <br>
+    <strong>Como obter:</strong> Através de meditação profunda, rituais espirituais ou sobrevivendo a eventos traumáticos. <br>
+    <strong>Medida por:</strong> Energia + Determinação.
+    <br><br>
+    <h4>Energia Amaldiçoada</h4>
+    <p>
+        Um poder sombrio e destrutivo, nascido do ódio, medo e sofrimento. Usuários da Energia Amaldiçoada são capazes de lançar maldições devastadoras, manifestar técnicas de Jujutsu e transformar emoções negativas em força bruta.
+    </p>
+    <strong>Afinidade:</strong> Indicado para feiticeiros Jujutsu e seres amaldiçoados. <br>
+    <strong>Como obter:</strong> Através de sofrimento extremo, rituais de maldição ou treinamentos proibidos. <br>
+    <strong>Medida por:</strong> Energia.
+    <br><br>
+    <h4>KI</h4>
+    <p>
+        KI é a energia interior que fortalece o corpo e a mente. Através da disciplina e do treinamento árduo, guerreiros aprimoram sua força física e resistência, tornando-se combatentes formidáveis.
+    </p>
+    <strong>Afinidade:</strong> Perfeito para mestres de artes marciais e lutadores que focam em força bruta. <br>
+    <strong>Como obter:</strong> Meditação rigorosa, treinamento físico intenso e domínio de técnicas de combate. <br>
+    <strong>Medida por:</strong> Energia + Força.
+    <br><br>
+    <h4>Chakra</h4>
+    <p>
+        Chakra é uma combinação de energia espiritual e física, permitindo o uso de técnicas especiais e manipulação energética. Aqueles que dominam o Chakra conseguem realizar façanhas sobre-humanas e técnicas ninjas avançadas.
+    </p>
+    <strong>Afinidade:</strong> Indicado para ninjas e monges que utilizam técnicas especializadas. <br>
+    <strong>Como obter:</strong> Treinamento intensivo do corpo e da mente, além de heranças genéticas específicas. <br>
+    <strong>Medida por:</strong> Energia + Força.
+    <br><br>
+    <h3>Escolha Sua Energia</h3>
+    <p>
+        A escolha da sua energia é permanente e definirá seu estilo de jogo. Pense cuidadosamente em como você deseja enfrentar os desafios do mundo de "Burned Fate".
+    </p>
+<br>
+    <h2> Nem todas as raças possuem a escolha de pegar qualquer energia que desejar, algumas possuem limitações. Mas cada energia tem seu foco, seu triunfo, desde energia vital com foco em curas e vitalidade, até mana, com foco em mágias.</h2>
+</div>
+
+
+
+
+        <!-- Botão de Voltar -->
+        <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+    </main>
+
+    <!-- JavaScript para Alternar Abas -->
+    <script>
+       function mostrarAba(id) {
+    // Esconde todos os conteúdos das abas
+    document.querySelectorAll('.conteudo-abas div').forEach(function(aba) {
+        aba.classList.remove('ativo');
+    });
+
+    // Mostra o conteúdo da aba selecionada
+    document.getElementById(id).classList.add('ativo');
+
+    // Atualiza o botão ativo
+    document.querySelectorAll('.abas button').forEach(function(botao) {
+        botao.classList.remove('ativo');
+    });
+    document.querySelector(`button[onclick="mostrarAba('${id}')"]`).classList.add('ativo');
+}
+    </script>
+
+    
+</body>
+</html>
